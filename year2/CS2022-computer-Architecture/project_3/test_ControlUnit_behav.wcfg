@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="test_ControlUnit_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="test_ControlUnit" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="21750001fs"></ZoomEndTime>
+      <Cursor1Time time="2000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="59"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="18" />
+   <wvobject fp_name="/test_ControlUnit/dataIn" type="array">
+      <obj_property name="ElementShortName">dataIn[15:0]</obj_property>
+      <obj_property name="ObjectShortName">dataIn[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_ControlUnit/ZNCV" type="array">
+      <obj_property name="ElementShortName">ZNCV[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ZNCV[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_ControlUnit/clock" type="logic">
+      <obj_property name="ElementShortName">clock</obj_property>
+      <obj_property name="ObjectShortName">clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_ControlUnit/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_ControlUnit/DR" type="array">
+      <obj_property name="ElementShortName">DR[2:0]</obj_property>
+      <obj_property name="ObjectShortName">DR[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_ControlUnit/SA" type="array">
+      <obj_property name="ElementShortName">SA[2:0]</obj_property>
+      <obj_property name="ObjectShortName">SA[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_ControlUnit/SB" type="array">
+      <obj_property name="ElementShortName">SB[2:0]</obj_property>
+      <obj_property name="ObjectShortName">SB[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_ControlUnit/TD" type="logic">
+      <obj_property name="ElementShortName">TD</obj_property>
+      <obj_property name="ObjectShortName">TD</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_ControlUnit/TA" type="logic">
+      <obj_property name="ElementShortName">TA</obj_property>
+      <obj_property name="ObjectShortName">TA</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_ControlUnit/TB" type="logic">
+      <obj_property name="ElementShortName">TB</obj_property>
+      <obj_property name="ObjectShortName">TB</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_ControlUnit/MB" type="logic">
+      <obj_property name="ElementShortName">MB</obj_property>
+      <obj_property name="ObjectShortName">MB</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_ControlUnit/FS" type="array">
+      <obj_property name="ElementShortName">FS[4:0]</obj_property>
+      <obj_property name="ObjectShortName">FS[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_ControlUnit/MD" type="logic">
+      <obj_property name="ElementShortName">MD</obj_property>
+      <obj_property name="ObjectShortName">MD</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_ControlUnit/RW" type="logic">
+      <obj_property name="ElementShortName">RW</obj_property>
+      <obj_property name="ObjectShortName">RW</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_ControlUnit/MM" type="logic">
+      <obj_property name="ElementShortName">MM</obj_property>
+      <obj_property name="ObjectShortName">MM</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_ControlUnit/MW" type="logic">
+      <obj_property name="ElementShortName">MW</obj_property>
+      <obj_property name="ObjectShortName">MW</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_ControlUnit/Address" type="array">
+      <obj_property name="ElementShortName">Address[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Address[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_ControlUnit/clk_period" type="other">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
+   </wvobject>
+</wave_config>

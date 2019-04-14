@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="test_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="test" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="631500001fs"></ZoomEndTime>
+      <Cursor1Time time="60000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="158"></NameColumnWidth>
+      <ValueColumnWidth column_width="177"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="18" />
+   <wvobject fp_name="/test/src_s0" type="logic">
+      <obj_property name="ElementShortName">src_s0</obj_property>
+      <obj_property name="ObjectShortName">src_s0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/src_s1" type="logic">
+      <obj_property name="ElementShortName">src_s1</obj_property>
+      <obj_property name="ObjectShortName">src_s1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/src_s2" type="logic">
+      <obj_property name="ElementShortName">src_s2</obj_property>
+      <obj_property name="ObjectShortName">src_s2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/des_A0" type="logic">
+      <obj_property name="ElementShortName">des_A0</obj_property>
+      <obj_property name="ObjectShortName">des_A0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/des_A1" type="logic">
+      <obj_property name="ElementShortName">des_A1</obj_property>
+      <obj_property name="ObjectShortName">des_A1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/des_A2" type="logic">
+      <obj_property name="ElementShortName">des_A2</obj_property>
+      <obj_property name="ObjectShortName">des_A2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/data_src" type="logic">
+      <obj_property name="ElementShortName">data_src</obj_property>
+      <obj_property name="ObjectShortName">data_src</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/data" type="array">
+      <obj_property name="ElementShortName">data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">data[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/reg0" type="array">
+      <obj_property name="ElementShortName">reg0[15:0]</obj_property>
+      <obj_property name="ObjectShortName">reg0[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/reg1" type="array">
+      <obj_property name="ElementShortName">reg1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">reg1[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/reg2" type="array">
+      <obj_property name="ElementShortName">reg2[15:0]</obj_property>
+      <obj_property name="ObjectShortName">reg2[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/reg3" type="array">
+      <obj_property name="ElementShortName">reg3[15:0]</obj_property>
+      <obj_property name="ObjectShortName">reg3[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/reg4" type="array">
+      <obj_property name="ElementShortName">reg4[15:0]</obj_property>
+      <obj_property name="ObjectShortName">reg4[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/reg5" type="array">
+      <obj_property name="ElementShortName">reg5[15:0]</obj_property>
+      <obj_property name="ObjectShortName">reg5[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/reg6" type="array">
+      <obj_property name="ElementShortName">reg6[15:0]</obj_property>
+      <obj_property name="ObjectShortName">reg6[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/reg7" type="array">
+      <obj_property name="ElementShortName">reg7[15:0]</obj_property>
+      <obj_property name="ObjectShortName">reg7[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/clk_period" type="other">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
+   </wvobject>
+</wave_config>

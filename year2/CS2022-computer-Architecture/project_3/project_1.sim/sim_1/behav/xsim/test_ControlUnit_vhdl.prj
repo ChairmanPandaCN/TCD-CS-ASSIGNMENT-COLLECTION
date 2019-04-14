@@ -1,0 +1,13 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../project_1.srcs/sources_1/new/CAR.vhd" \
+"../../../../project_1.srcs/sources_1/new/InstructionRegister.vhd" \
+"../../../../project_1.srcs/sources_1/new/MUXC.vhd" \
+"../../../../project_1.srcs/sources_1/new/MUXS.vhd" \
+"../../../../project_1.srcs/sources_1/new/controlMemory.vhd" \
+"../../../../project_1.srcs/sources_1/new/controlUnit.vhd" \
+"../../../../project_1.srcs/sources_1/new/programCounter.vhd" \
+"../../../../project_1.srcs/sim_1/new/test_ControlUnit.vhd" \
+
+# Do not sort compile order
+nosort

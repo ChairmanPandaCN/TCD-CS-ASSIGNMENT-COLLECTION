@@ -1,0 +1,198 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "U:/vivado/project_1/project_1.srcs/sources_1/new/MUXS.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MUXS
+INFO: [VRFC 10-163] Analyzing VHDL file "U:/vivado/project_1/project_1.srcs/sources_1/new/controlUnit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity controlUnit
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/CAR.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'CAR'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/InstructionRegister.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'instructionRegister'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/MUXC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'MUXC'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/MUXS.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'MUXS'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/controlMemory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'controlMemory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/controlUnit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'controlUnit'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/programCounter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'programCounter'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sim_1/new/test_ControlUnit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_ControlUnit'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/CAR.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'CAR'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/controlMemory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'controlMemory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sim_1/new/test_ControlUnit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_ControlUnit'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sim_1/new/test_ControlUnit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_ControlUnit'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/CAR.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'CAR'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/controlUnit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'controlUnit'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/controlUnit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'controlUnit'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sim_1/new/test_ControlUnit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_ControlUnit'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sim_1/new/test_ControlUnit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_ControlUnit'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sim_1/new/test_ControlUnit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_ControlUnit'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sim_1/new/test_ControlUnit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_ControlUnit'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sim_1/new/test_ControlUnit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_ControlUnit'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sim_1/new/test_ControlUnit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_ControlUnit'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/controlMemory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'controlMemory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/ALU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ALU'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/CPU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'CPU'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/arithmeticCircuit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'AC'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/barrelShifter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Shifter'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/dataPath.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'dataPath'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/decoder_3to8.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'decoder_4to9'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/full_adder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'full_adder'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/function_Unit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'function_Unit'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/load_enable.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'load_enable'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/logicCircuit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'LC'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/mux2_16bit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mux2_16bit'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/mux3_1bit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mux3_1bit'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/mux4_16bit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mux4_16bit'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/mux8_16bit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mux9_16bit'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/negative_detector.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'negative_detector'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/overflow_detector.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'overflow_detector'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/register16.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'reg16'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/registerFile.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'register_file'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/ripple_carry_adder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ripple_carry_adder'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/zero_detector.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'zero_detector'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sim_1/new/test_CPU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_CPU'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/CPU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'CPU'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/controlMemory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'controlMemory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/controlMemory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'controlMemory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sim_1/new/test_CPU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_CPU'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sim_1/new/test_CPU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_CPU'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sim_1/new/test_CPU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_CPU'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sim_1/new/test_CPU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_CPU'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/controlMemory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'controlMemory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/controlMemory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'controlMemory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/controlMemory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'controlMemory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/controlMemory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'controlMemory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/controlMemory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'controlMemory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/controlMemory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'controlMemory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chairmanpanda/codeProject/2019/architure/project_3/project_1.srcs/sources_1/new/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory'
