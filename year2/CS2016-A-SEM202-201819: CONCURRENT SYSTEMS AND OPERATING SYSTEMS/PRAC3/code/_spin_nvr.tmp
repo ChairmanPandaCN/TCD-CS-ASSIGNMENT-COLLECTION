@@ -1,0 +1,7 @@
+never ltl_0 {    /* !((! ([] (hasThought))) || (<> (hasEaten))) */
+accept_init:
+T0_init:
+	do
+	:: (! ((hasEaten)) && (hasThought)) -> goto T0_init
+	od;
+}
