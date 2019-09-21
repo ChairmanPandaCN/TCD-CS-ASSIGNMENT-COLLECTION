@@ -1,0 +1,17 @@
+myclass=class
+num : integer;static;
+end;
+var
+n1, n2 : myclass;
+begin
+n1:= myclass.create;
+n2:= myclass.create; {
+n1.num := 12;
+writeln(n2.num);
+n2.num := 31;
+writeln(n1.num);
+writeln(myclass.num);}
+myclass.num := myclass.num + 20;
+writeln(n1.num);
+writeln(n2.num);
+end.
