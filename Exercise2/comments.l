@@ -2,7 +2,7 @@
 %}
 
 %%
-\*\*[a-zA-Z ]* {}
+\*{2}.* {}
 \{[^\}]*\} {}
 \".*\"  {printf(yytext);}
 \{[^\}]* {printf("syntax error\n");}
