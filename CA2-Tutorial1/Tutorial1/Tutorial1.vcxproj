@@ -152,7 +152,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="t1.cpp" />
     <ClCompile Include="t1Test.cpp" />
   </ItemGroup>
   <ItemGroup>

@@ -52,7 +52,8 @@ if_c_greater_v:
 
 ;int p(int i, int j, int, k, int l) {
 ;	return min(min(g, i, j), k, l);
-;}
+;}
+
 p:
   push ebp			;
   mov ebp,esp		;
@@ -103,7 +104,7 @@ gcd:
 	test ebx,ebx    ;
 	je ifZero       ;
 	cdq             ;
-	idiv ebx        ;	ebx = a mod b
+	idiv ebx        ;	ebx = a mod b eax=a/b
 
 	push edx        ;  push a%b onto the stack
 	mov ebx,[ebp+12] ;  eax=a
