@@ -26,24 +26,38 @@ if_c_greater_v:				;
 	ret 0					;
 
 p:
-	push r9					;
-	mov r9,r8				;
-	mov r8,rdx				;
-	mov rdx,rcx				;
-	mov rcx,g				;
+	sub rsp,32				;  allocate shadow space
+	push rbp				;
+	push r9					;  Push l onto the stack
+	mov r9,r8				;  r9 = k
+	mov r8,rdx				;  r8 = j
+	mov rdx,rcx				;  rdx = i
+	mov rcx,g				;  rcx = g
+	call min				;  call min
+	mov rcx,rax				;  rcx = min(g,i,j)
+	mov rdx,r8				;  rdx =k
+	pop r8					;  r8  =l
+	call min				;  call min
+	pop rbp					;
+	add rsp,32				;  deallocate shadow space
+	ret 0					;  ret 0
+
+
+gcd:							
+	test rdx,rdx			; if(b!=0)
+	je	b_equal_zero		;
+	mov r10,rdx				;
+	mov rax,rcx				;
+	cqo						;
+	idiv r10				;
+	mov rcx,r10				;
 	sub rsp,32				;
-	call min				;
-	add rsp,32				;
-	mov rcx,rax				;
-	mov rdx,r8				;
-	pop r8					;
-	sub rsp,32				;
-	call min				;
+	call gcd				;
 	add rsp,32				;
 	ret 0					;
-
-
-
+b_equal_zero:				;
+	mov rax,rcx				;
+	ret 0					;
 
 	
 	
