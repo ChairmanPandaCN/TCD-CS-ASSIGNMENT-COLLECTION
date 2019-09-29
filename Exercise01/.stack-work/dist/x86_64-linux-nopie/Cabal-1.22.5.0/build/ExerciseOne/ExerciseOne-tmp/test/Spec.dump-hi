@@ -1,0 +1,1668 @@
+
+==================== FINAL INTERFACE ====================
+2019-09-29 12:40:24.887378 UTC
+
+interface main@main:Main 7103
+  interface hash: 8bddb4e1af6f3d0fc576c32a0815bd18
+  ABI hash: 6ac145acd7aa14dadb48b9348859e3cb
+  export-list hash: c5813e621001de7533a421eec26c8afe
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 4b420c162449c94cfa18bdcbf3103509
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.commonLenTests
+  Main.main
+  Main.nthTests
+  Main.raiseTests
+  Main.tests
+module dependencies: Ex01
+package dependencies: HUnit-1.3.1.2@HUnit_AzBU5jSVcUy6oxicItOe0b
+                      QuickCheck-2.8.2@Quick_6TxL5Cx3o2p0HsyT59KWiD
+                      ansi-terminal-0.6.2.3@ansit_BDlVdfJGo3VHCIHxPTNjH1
+                      ansi-wl-pprint-0.6.7.3@ansiw_KTAhiPa3RNI09mbeoAwSSX
+                      array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA base-4.8.2.0
+                      binary-0.7.5.0@binar_3uXFWMoAGBg0xKP9MHKRwi
+                      bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6
+                      containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU
+                      deepseq-1.4.1.1@deeps_6vMKxt5sPFR0XsbRWvvq59 ghc-prim-0.4.0.0
+                      hostname-1.0@hostn_3HfIQy11Ojb2in3623bzR3 integer-gmp-1.0.0.0
+                      primitive-0.6.1.0@primi_EphY2c7CCxSCBKjAN0YTR3
+                      random-1.1@rando_9Kgekc9yEaLHLNUuw6paWL
+                      regex-base-0.93.2@regex_47KXx9dLqeO8MNJeizLKhP
+                      regex-posix-0.95.2@regex_ClFHQvfj6rtJ1Pxo4OAy89
+                      test-framework-quickcheck2-0.3.0.3@testf_1ho9w8SmwvV7ao9mE3ZaRC
+                      test-framework-0.8.1.1@testf_B1MVPJUrcmB7HNAGf4Uv93
+                      test-framework-hunit-0.3.0.2@testf_EptgaRzrQ5a5FsSX1777nM
+                      text-1.2.2.1@text_HmqVQnZSpjaC156ABqPhne
+                      tf-random-0.5@tfran_1eLmkn3WUnC8NZpPuDLGKF
+                      time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn
+                      transformers-0.4.2.0@trans_GZTjP9K5WFq01xC9BAGQpF
+                      xml-1.3.14@xml_AyrkYt7P0aQDgNiMBs2bvw
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+         binary-0.7.5.0@binar_3uXFWMoAGBg0xKP9MHKRwi:Data.Binary.Generic
+         bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6:Data.ByteString.Builder
+         regex-base-0.93.2@regex_47KXx9dLqeO8MNJeizLKhP:Text.Regex.Base.Context
+         regex-posix-0.95.2@regex_ClFHQvfj6rtJ1Pxo4OAy89:Text.Regex.Posix.String
+         text-1.2.2.1@text_HmqVQnZSpjaC156ABqPhne:Data.Text
+         text-1.2.2.1@text_HmqVQnZSpjaC156ABqPhne:Data.Text.Lazy
+         text-1.2.2.1@text_HmqVQnZSpjaC156ABqPhne:Data.Text.Show
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.Calendar.Gregorian
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.Format.Parse
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.LocalTime.LocalTime
+         transformers-0.4.2.0@trans_GZTjP9K5WFq01xC9BAGQpF:Control.Monad.Trans.Error
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Functor.Identity
+                         base-4.8.2.0:Data.Monoid base-4.8.2.0:Data.Type.Equality
+                         base-4.8.2.0:Data.Void base-4.8.2.0:GHC.Exts
+                         base-4.8.2.0:GHC.Generics
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.IntMap.Base
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.IntSet.Base
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Map.Base
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Sequence
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Set.Base
+                         primitive-0.6.1.0@primi_EphY2c7CCxSCBKjAN0YTR3:Control.Monad.Primitive
+                         text-1.2.2.1@text_HmqVQnZSpjaC156ABqPhne:Data.Text
+                         text-1.2.2.1@text_HmqVQnZSpjaC156ABqPhne:Data.Text.Lazy
+import  -/  HUnit-1.3.1.2@HUnit_AzBU5jSVcUy6oxicItOe0b:Test.HUnit 66bcf89478e54cab0bc320939852d08e
+import  -/  HUnit-1.3.1.2@HUnit_AzBU5jSVcUy6oxicItOe0b:Test.HUnit.Base 05e3acf3b4a0039179fededbe30715ce
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+import  -/  Ex01 b2bca38afbbb30525edb31c0d5284c5e
+  exports: 27d600340051c648b980cb48bae7b86a
+  commonLen 1d2353b34520d38803ab48573f48f4a5
+  nth ef39b720f1ffec40ccef9f9d9d3606e5
+  raise 15be366a01cc517c32451af04644a6c9
+import  -/  test-framework-quickcheck2-0.3.0.3@testf_1ho9w8SmwvV7ao9mE3ZaRC:Test.Framework.Providers.QuickCheck2 f581717353d83c62095d8ecb8a5d4d4b
+import  -/  test-framework-0.8.1.1@testf_B1MVPJUrcmB7HNAGf4Uv93:Test.Framework f67b2d8241bfa35267aad2e4a4b76ee9
+import  -/  test-framework-0.8.1.1@testf_B1MVPJUrcmB7HNAGf4Uv93:Test.Framework.Core f433b65c2544657a20d68fe310c8026a
+import  -/  test-framework-0.8.1.1@testf_B1MVPJUrcmB7HNAGf4Uv93:Test.Framework.Runners.Console a28542c59ee3219b6b399e1f9a2c960c
+import  -/  test-framework-hunit-0.3.0.2@testf_EptgaRzrQ5a5FsSX1777nM:Test.Framework.Providers.HUnit 5a7012f0903213dc7b92550390342c68
+753ecf6029803df2ae5ce118d0cdcfe4
+  commonLenTests :: Test.Framework.Core.Test
+  {- Strictness: m2,
+     Unfolding: (Test.Framework.Core.TestGroup
+                   Main.commonLenTests111
+                   Main.commonLenTests1) -}
+d6c98c4e14ec54496412e476eddffa07
+  commonLenTests1 :: [Test.Framework.Core.Test]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Test.Framework.Core.Test
+                   Main.commonLenTests102
+                   Main.commonLenTests2) -}
+5abf2128f92c6897f32e0c2564325a81
+  commonLenTests10 :: GHC.Types.Int
+  {- Unfolding: (Ex01.count
+                   @ GHC.Integer.Type.Integer
+                   @ GHC.Types.Int
+                   GHC.Integer.Type.$fEqInteger
+                   GHC.Num.$fNumInt
+                   Main.commonLenTests19
+                   Main.commonLenTests11
+                   Ex01.commonLen1) -}
+b499cb2abed0c9b6cbe815d396ef3aab
+  commonLenTests100 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 38) -}
+dcd755feec1976659c520b995474f98b
+  commonLenTests101 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "<x,y> and <x,y> share 2 [2 marks]"#) -}
+c4419c0aa85d404e034718208be7c19b
+  commonLenTests102 :: Test.Framework.Core.Test
+  {- Unfolding: (Test.Framework.Core.Test
+                   @ Test.Framework.Providers.HUnit.TestCaseRunning
+                   @ Test.Framework.Providers.HUnit.TestCaseResult
+                   @ Test.Framework.Providers.HUnit.TestCase
+                   Test.Framework.Providers.HUnit.$fTestlikeTestCaseRunningTestCaseResultTestCase
+                   Test.Framework.Providers.HUnit.testCase1
+                     `cast`
+                   (Sym (Data.Typeable.Internal.NTCo:Typeable[0]
+                             <*>_N <Test.Framework.Providers.HUnit.TestCase>_N))
+                   Main.commonLenTests110
+                   Main.commonLenTests103
+                     `cast`
+                   (Trans
+                        (Sym (GHC.Types.NTCo:IO[0] <()>_R))
+                        (Sym (Test.Framework.Providers.HUnit.NTCo:TestCase[0])))) -}
+67209a83edd39ca240c05dacd67f45ea
+  commonLenTests103 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ eta2 :: GHC.Prim.State#
+                             GHC.Prim.RealWorld[OneShot] ->
+                 Test.HUnit.Base.@=?7
+                   @ GHC.Types.Int
+                   Main.commonLenTests105
+                     `cast`
+                   (Sym (GHC.IP.NTCo:IP[0] <"loc">_N <GHC.Stack.CallStack>_N))
+                   GHC.Classes.$fEqInt
+                   GHC.Show.$fShowInt
+                   (GHC.Types.[] @ GHC.Types.Char)
+                   Main.commonLenTests81
+                   Main.commonLenTests104
+                   eta2) -}
+d15982cb152af4dc1bf31213b1cd4559
+  commonLenTests104 :: GHC.Types.Int
+  {- Unfolding: (Ex01.count
+                   @ GHC.Types.Int
+                   @ GHC.Types.Int
+                   GHC.Classes.$fEqInt
+                   GHC.Num.$fNumInt
+                   (GHC.Types.[] @ GHC.Types.Int)
+                   (GHC.Types.[] @ GHC.Types.Int)
+                   Ex01.commonLen1) -}
+18faaa90b1f7a1235355418782ff8eac
+  commonLenTests105 :: GHC.Stack.CallStack
+  {- Unfolding: (GHC.Stack.CallStack Main.commonLenTests106) -}
+93e995347e9b3fbaeba803ecdbd4c2e2
+  commonLenTests106 :: [([GHC.Types.Char], GHC.SrcLoc.SrcLoc)]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+                   Test.HUnit.Base.@?=2
+                   Main.commonLenTests107) -}
+c46b94109db0a8e3476cef0b030172d8
+  commonLenTests107 :: [([GHC.Types.Char], GHC.SrcLoc.SrcLoc)]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+                   Main.commonLenTests108
+                   (GHC.Types.[] @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc))) -}
+5fd5c6a087eec68c04d8a4997846373d
+  commonLenTests108 :: ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+  {- Unfolding: ((Main.commonLenTests35, Main.commonLenTests109)) -}
+8776f01b9123a10a19cf263686b3a617
+  commonLenTests109 :: GHC.SrcLoc.SrcLoc
+  {- Unfolding: (GHC.SrcLoc.SrcLoc
+                   Main.commonLenTests34
+                   Main.commonLenTests33
+                   Main.commonLenTests32
+                   Main.commonLenTests88
+                   Main.commonLenTests99
+                   Main.commonLenTests88
+                   Main.commonLenTests31) -}
+637eabcfbde63dcb022bcbf9d611dbb3
+  commonLenTests11 :: [GHC.Integer.Type.Integer]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Integer.Type.Integer
+                   Main.commonLenTests18
+                   Main.commonLenTests12) -}
+1e8e41a18ec8a42add1b7a5ce3494cc8
+  commonLenTests110 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "empty and empty share 0 [2 marks]"#) -}
+58eae9c3e46b93769d9a417db537c4bc
+  commonLenTests111 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "\n\
+                   \Testing 'commonLen' (14 marks)"#) -}
+fb0ffcece0c239afc8427462ad0c440b
+  commonLenTests12 :: [GHC.Integer.Type.Integer]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Integer.Type.Integer
+                   Main.commonLenTests17
+                   Main.commonLenTests13) -}
+df2aa2253dafe5e4c418bf49c1d59363
+  commonLenTests13 :: [GHC.Integer.Type.Integer]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Integer.Type.Integer
+                   Main.commonLenTests16
+                   Main.commonLenTests14) -}
+2ae89805893ecb39648ad41cc57ff859
+  commonLenTests14 :: [GHC.Integer.Type.Integer]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Integer.Type.Integer
+                   Main.commonLenTests15
+                   (GHC.Types.[] @ GHC.Integer.Type.Integer)) -}
+17ac81820c3c40a8f42915c5178af9f3
+  commonLenTests15 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (__integer 4) -}
+19bffddf5c1775ed96d35575ad055a58
+  commonLenTests16 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (__integer 42) -}
+95d05ab1666d52331b11b103a087a6ab
+  commonLenTests17 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (__integer 2) -}
+a8aea89920959611f8488c24d1b7bd90
+  commonLenTests18 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (__integer 1) -}
+052e9e00ceb630485e5cdb8020ea07d7
+  commonLenTests19 :: [GHC.Integer.Type.Integer]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Integer.Type.Integer
+                   Main.commonLenTests18
+                   Main.commonLenTests20) -}
+d33164b9cf0c337f4377b3ea829fca64
+  commonLenTests2 :: [Test.Framework.Core.Test]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Test.Framework.Core.Test
+                   Main.commonLenTests91
+                   Main.commonLenTests3) -}
+5c817b4efc0d3617eb0e2e54ad69b846
+  commonLenTests20 :: [GHC.Integer.Type.Integer]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Integer.Type.Integer
+                   Main.commonLenTests17
+                   Main.commonLenTests21) -}
+9a66cf5daedd44f53eefffc71c81e8b9
+  commonLenTests21 :: [GHC.Integer.Type.Integer]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Integer.Type.Integer
+                   Main.commonLenTests22
+                   Main.commonLenTests14) -}
+d6210d57e1e26d76a08194bdbbf81b4b
+  commonLenTests22 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (__integer 3) -}
+663c51cd82f96f8fa3a8c3a60189d284
+  commonLenTests23 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 2) -}
+c70b0d112e654b58a46897d654d4a814
+  commonLenTests24 :: GHC.Stack.CallStack
+  {- Unfolding: (GHC.Stack.CallStack Main.commonLenTests25) -}
+fe3ac54d8c08b95136cb7d25a10a2285
+  commonLenTests25 :: [([GHC.Types.Char], GHC.SrcLoc.SrcLoc)]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+                   Test.HUnit.Base.@?=2
+                   Main.commonLenTests26) -}
+92ee7bab99bd591207b85f2754aaccf9
+  commonLenTests26 :: [([GHC.Types.Char], GHC.SrcLoc.SrcLoc)]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+                   Main.commonLenTests27
+                   (GHC.Types.[] @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc))) -}
+8ec68d9c21210f0057003da01b28758a
+  commonLenTests27 :: ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+  {- Unfolding: ((Main.commonLenTests35, Main.commonLenTests28)) -}
+fade195c4376083d016462351096775a
+  commonLenTests28 :: GHC.SrcLoc.SrcLoc
+  {- Unfolding: (GHC.SrcLoc.SrcLoc
+                   Main.commonLenTests34
+                   Main.commonLenTests33
+                   Main.commonLenTests32
+                   Main.commonLenTests31
+                   Main.commonLenTests30
+                   Main.commonLenTests31
+                   Main.commonLenTests29) -}
+7ea5ce7f5503cb9bd5446f4d50d43768
+  commonLenTests29 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 52) -}
+a587d1f1c5b67afc0fbaaa2d13f6600e
+  commonLenTests3 :: [Test.Framework.Core.Test]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Test.Framework.Core.Test
+                   Main.commonLenTests78
+                   Main.commonLenTests4) -}
+8fcc164607bd18c46f09514bc999413a
+  commonLenTests30 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 49) -}
+677d5e6ad334da1545bd27fca063718f
+  commonLenTests31 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 48) -}
+f7e477952790293bdc98ed3fd0786994
+  commonLenTests32 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "test/Spec.hs"#) -}
+ac1d74b4dd16a2f07eb80399a834a29b
+  commonLenTests33 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Main"#) -}
+495f9ba9f1f63135a74506e3f3aff1e2
+  commonLenTests34 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "main"#) -}
+27eec78ae3b23d6cb85e7b578f12629e
+  commonLenTests35 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "@?="#) -}
+78a8b1318cf0ea9df9adc8202c0e403e
+  commonLenTests36 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "<a,b,c,d> and <a,b,x,d> share 2 [2 marks]"#) -}
+b845272137c26cf376dd62d83003880a
+  commonLenTests37 :: Test.Framework.Core.Test
+  {- Unfolding: (Test.Framework.Core.Test
+                   @ Test.Framework.Providers.HUnit.TestCaseRunning
+                   @ Test.Framework.Providers.HUnit.TestCaseResult
+                   @ Test.Framework.Providers.HUnit.TestCase
+                   Test.Framework.Providers.HUnit.$fTestlikeTestCaseRunningTestCaseResultTestCase
+                   Test.Framework.Providers.HUnit.testCase1
+                     `cast`
+                   (Sym (Data.Typeable.Internal.NTCo:Typeable[0]
+                             <*>_N <Test.Framework.Providers.HUnit.TestCase>_N))
+                   Main.commonLenTests54
+                   Main.commonLenTests38
+                     `cast`
+                   (Trans
+                        (Sym (GHC.Types.NTCo:IO[0] <()>_R))
+                        (Sym (Test.Framework.Providers.HUnit.NTCo:TestCase[0])))) -}
+1cd931e3a3bcbd85968276294e1b3b57
+  commonLenTests38 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ eta2 :: GHC.Prim.State#
+                             GHC.Prim.RealWorld[OneShot] ->
+                 Test.HUnit.Base.@=?7
+                   @ GHC.Types.Int
+                   Main.commonLenTests47
+                     `cast`
+                   (Sym (GHC.IP.NTCo:IP[0] <"loc">_N <GHC.Stack.CallStack>_N))
+                   GHC.Classes.$fEqInt
+                   GHC.Show.$fShowInt
+                   (GHC.Types.[] @ GHC.Types.Char)
+                   Main.commonLenTests23
+                   Main.commonLenTests39
+                   eta2) -}
+3f0f682ed7bf03df25bce2f1c0d0a168
+  commonLenTests39 :: GHC.Types.Int
+  {- Unfolding: (Ex01.count
+                   @ GHC.Integer.Type.Integer
+                   @ GHC.Types.Int
+                   GHC.Integer.Type.$fEqInteger
+                   GHC.Num.$fNumInt
+                   Main.commonLenTests43
+                   Main.commonLenTests40
+                   Ex01.commonLen1) -}
+c1170b146b26eecf439f078f0e543811
+  commonLenTests4 :: [Test.Framework.Core.Test]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Test.Framework.Core.Test
+                   Main.commonLenTests68
+                   Main.commonLenTests5) -}
+504a90a86dca45f552451ad7b3ec5584
+  commonLenTests40 :: [GHC.Integer.Type.Integer]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Integer.Type.Integer
+                   Main.commonLenTests16
+                   Main.commonLenTests41) -}
+1b38adeb848e7d3de2fb059c8c6dbe62
+  commonLenTests41 :: [GHC.Integer.Type.Integer]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Integer.Type.Integer
+                   Main.commonLenTests42
+                   (GHC.Types.[] @ GHC.Integer.Type.Integer)) -}
+9f78c06931be44b08a1cf510841024ba
+  commonLenTests42 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (__integer 99) -}
+e69e013984373006d2165ec7b5600923
+  commonLenTests43 :: [GHC.Integer.Type.Integer]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Integer.Type.Integer
+                   Main.commonLenTests16
+                   Main.commonLenTests44) -}
+e78019778ddad49968e09557adeaac59
+  commonLenTests44 :: [GHC.Integer.Type.Integer]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Integer.Type.Integer
+                   Main.commonLenTests42
+                   Main.commonLenTests45) -}
+a92e4e1e5f0597294e540f916421db02
+  commonLenTests45 :: [GHC.Integer.Type.Integer]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Integer.Type.Integer
+                   Main.commonLenTests46
+                   (GHC.Types.[] @ GHC.Integer.Type.Integer)) -}
+3dd2125be34c13734cd451b622f47b00
+  commonLenTests46 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (__integer 89) -}
+2c02534f7fd7abda493cd7ab6fc82bdb
+  commonLenTests47 :: GHC.Stack.CallStack
+  {- Unfolding: (GHC.Stack.CallStack Main.commonLenTests48) -}
+be005a825e96d672538122cd1f4fd06c
+  commonLenTests48 :: [([GHC.Types.Char], GHC.SrcLoc.SrcLoc)]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+                   Test.HUnit.Base.@?=2
+                   Main.commonLenTests49) -}
+de09cdd75fb9786166402e4123953cd3
+  commonLenTests49 :: [([GHC.Types.Char], GHC.SrcLoc.SrcLoc)]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+                   Main.commonLenTests50
+                   (GHC.Types.[] @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc))) -}
+b1b10135cacb45b0fb29a2cc7c6d86a2
+  commonLenTests5 :: [Test.Framework.Core.Test]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Test.Framework.Core.Test
+                   Main.commonLenTests55
+                   Main.commonLenTests6) -}
+726fe914c0758a7f42238858b722a99d
+  commonLenTests50 :: ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+  {- Unfolding: ((Main.commonLenTests35, Main.commonLenTests51)) -}
+f8672d0855f2d4752aa932457eeb1dfd
+  commonLenTests51 :: GHC.SrcLoc.SrcLoc
+  {- Unfolding: (GHC.SrcLoc.SrcLoc
+                   Main.commonLenTests34
+                   Main.commonLenTests33
+                   Main.commonLenTests32
+                   Main.commonLenTests53
+                   Main.commonLenTests31
+                   Main.commonLenTests53
+                   Main.commonLenTests52) -}
+3667f61d8fa2d63a7f5bb870780af66e
+  commonLenTests52 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 51) -}
+c4d09921906eb4b971a3bf05126f5bc1
+  commonLenTests53 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 46) -}
+b19001bad2b6aa94e629f9d2f620eff4
+  commonLenTests54 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "<x,y,z> and <x,y> share 2 [2 marks]"#) -}
+d2bffc4015ba65f65ad947267e7fb78c
+  commonLenTests55 :: Test.Framework.Core.Test
+  {- Unfolding: (Test.Framework.Core.Test
+                   @ Test.Framework.Providers.HUnit.TestCaseRunning
+                   @ Test.Framework.Providers.HUnit.TestCaseResult
+                   @ Test.Framework.Providers.HUnit.TestCase
+                   Test.Framework.Providers.HUnit.$fTestlikeTestCaseRunningTestCaseResultTestCase
+                   Test.Framework.Providers.HUnit.testCase1
+                     `cast`
+                   (Sym (Data.Typeable.Internal.NTCo:Typeable[0]
+                             <*>_N <Test.Framework.Providers.HUnit.TestCase>_N))
+                   Main.commonLenTests67
+                   Main.commonLenTests56
+                     `cast`
+                   (Trans
+                        (Sym (GHC.Types.NTCo:IO[0] <()>_R))
+                        (Sym (Test.Framework.Providers.HUnit.NTCo:TestCase[0])))) -}
+bc7a3974b8f3de8d77690933d6b6aaae
+  commonLenTests56 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ eta2 :: GHC.Prim.State#
+                             GHC.Prim.RealWorld[OneShot] ->
+                 Test.HUnit.Base.@=?7
+                   @ GHC.Types.Int
+                   Main.commonLenTests60
+                     `cast`
+                   (Sym (GHC.IP.NTCo:IP[0] <"loc">_N <GHC.Stack.CallStack>_N))
+                   GHC.Classes.$fEqInt
+                   GHC.Show.$fShowInt
+                   (GHC.Types.[] @ GHC.Types.Char)
+                   Main.commonLenTests59
+                   Main.commonLenTests57
+                   eta2) -}
+f574db0fc91df13cb61238fe55775be2
+  commonLenTests57 :: GHC.Types.Int
+  {- Unfolding: (Ex01.count
+                   @ GHC.Integer.Type.Integer
+                   @ GHC.Types.Int
+                   GHC.Integer.Type.$fEqInteger
+                   GHC.Num.$fNumInt
+                   Main.commonLenTests40
+                   Main.commonLenTests58
+                   Ex01.commonLen1) -}
+dc40926ac986caa512c78664de9953ce
+  commonLenTests58 :: [GHC.Integer.Type.Integer]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Integer.Type.Integer
+                   Main.commonLenTests16
+                   (GHC.Types.[] @ GHC.Integer.Type.Integer)) -}
+78acfc1ef781de2b8d7df92eb301d5b2
+  commonLenTests59 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 1) -}
+8ca3a22b96425ad41e9b2ac7fbaf1afe
+  commonLenTests6 :: [Test.Framework.Core.Test]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Test.Framework.Core.Test
+                   Main.commonLenTests37
+                   Main.commonLenTests7) -}
+473bcf8eba813c3c07065fa50622bb15
+  commonLenTests60 :: GHC.Stack.CallStack
+  {- Unfolding: (GHC.Stack.CallStack Main.commonLenTests61) -}
+f71f8dd53a720be303a334ff057f8f4b
+  commonLenTests61 :: [([GHC.Types.Char], GHC.SrcLoc.SrcLoc)]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+                   Test.HUnit.Base.@?=2
+                   Main.commonLenTests62) -}
+0b4327e3993bd4a4398ade92f3fd337a
+  commonLenTests62 :: [([GHC.Types.Char], GHC.SrcLoc.SrcLoc)]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+                   Main.commonLenTests63
+                   (GHC.Types.[] @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc))) -}
+0508b053886e3425bcb9b673cef2f3de
+  commonLenTests63 :: ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+  {- Unfolding: ((Main.commonLenTests35, Main.commonLenTests64)) -}
+edb9cdfc8145808044b5fb02d26236d4
+  commonLenTests64 :: GHC.SrcLoc.SrcLoc
+  {- Unfolding: (GHC.SrcLoc.SrcLoc
+                   Main.commonLenTests34
+                   Main.commonLenTests33
+                   Main.commonLenTests32
+                   Main.commonLenTests66
+                   Main.commonLenTests65
+                   Main.commonLenTests66
+                   Main.commonLenTests66) -}
+f6410225f7cb3f443fb46b6f8e0a938c
+  commonLenTests65 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 41) -}
+715bcede7aa34c4498ddd97e54e90787
+  commonLenTests66 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 44) -}
+61c7e2b72d2ae6d79cb7b30bc419ad73
+  commonLenTests67 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "<x,y> and <x> share 1 [2 marks]"#) -}
+99f688d2572a1b55b3914fe94ff6e1a9
+  commonLenTests68 :: Test.Framework.Core.Test
+  {- Unfolding: (Test.Framework.Core.Test
+                   @ Test.Framework.Providers.HUnit.TestCaseRunning
+                   @ Test.Framework.Providers.HUnit.TestCaseResult
+                   @ Test.Framework.Providers.HUnit.TestCase
+                   Test.Framework.Providers.HUnit.$fTestlikeTestCaseRunningTestCaseResultTestCase
+                   Test.Framework.Providers.HUnit.testCase1
+                     `cast`
+                   (Sym (Data.Typeable.Internal.NTCo:Typeable[0]
+                             <*>_N <Test.Framework.Providers.HUnit.TestCase>_N))
+                   Main.commonLenTests77
+                   Main.commonLenTests69
+                     `cast`
+                   (Trans
+                        (Sym (GHC.Types.NTCo:IO[0] <()>_R))
+                        (Sym (Test.Framework.Providers.HUnit.NTCo:TestCase[0])))) -}
+3569c3395bb7f0cff681735e9c776480
+  commonLenTests69 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ eta2 :: GHC.Prim.State#
+                             GHC.Prim.RealWorld[OneShot] ->
+                 Test.HUnit.Base.@=?7
+                   @ GHC.Types.Int
+                   Main.commonLenTests71
+                     `cast`
+                   (Sym (GHC.IP.NTCo:IP[0] <"loc">_N <GHC.Stack.CallStack>_N))
+                   GHC.Classes.$fEqInt
+                   GHC.Show.$fShowInt
+                   (GHC.Types.[] @ GHC.Types.Char)
+                   Main.commonLenTests59
+                   Main.commonLenTests70
+                   eta2) -}
+965f8db5254656053b8dfbfc00ef1f48
+  commonLenTests7 :: [Test.Framework.Core.Test]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Test.Framework.Core.Test
+                   Main.commonLenTests8
+                   (GHC.Types.[] @ Test.Framework.Core.Test)) -}
+98de95acf45b71b558c22e39ed49bbe2
+  commonLenTests70 :: GHC.Types.Int
+  {- Unfolding: (Ex01.count
+                   @ GHC.Integer.Type.Integer
+                   @ GHC.Types.Int
+                   GHC.Integer.Type.$fEqInteger
+                   GHC.Num.$fNumInt
+                   Main.commonLenTests58
+                   Main.commonLenTests40
+                   Ex01.commonLen1) -}
+060d0aece28e778f2077420806a3fd0b
+  commonLenTests71 :: GHC.Stack.CallStack
+  {- Unfolding: (GHC.Stack.CallStack Main.commonLenTests72) -}
+a14fcd40ec36a599e1646bf28126d192
+  commonLenTests72 :: [([GHC.Types.Char], GHC.SrcLoc.SrcLoc)]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+                   Test.HUnit.Base.@?=2
+                   Main.commonLenTests73) -}
+caf4a89cff8549680f8155c8bbacd6ab
+  commonLenTests73 :: [([GHC.Types.Char], GHC.SrcLoc.SrcLoc)]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+                   Main.commonLenTests74
+                   (GHC.Types.[] @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc))) -}
+2bd16ae86d872ba23a26c1372f6eb14d
+  commonLenTests74 :: ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+  {- Unfolding: ((Main.commonLenTests35, Main.commonLenTests75)) -}
+3590686cecaef717ec1228ebceac5f45
+  commonLenTests75 :: GHC.SrcLoc.SrcLoc
+  {- Unfolding: (GHC.SrcLoc.SrcLoc
+                   Main.commonLenTests34
+                   Main.commonLenTests33
+                   Main.commonLenTests32
+                   Main.commonLenTests76
+                   Main.commonLenTests65
+                   Main.commonLenTests76
+                   Main.commonLenTests66) -}
+3898a367105e51c54943809481f03986
+  commonLenTests76 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 42) -}
+a393d14529371a70829f37b251e5e018
+  commonLenTests77 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "<x> and <x,y> share 1 [2 marks]"#) -}
+9af655751017d733aa41b6d89589ed02
+  commonLenTests78 :: Test.Framework.Core.Test
+  {- Unfolding: (Test.Framework.Core.Test
+                   @ Test.Framework.Providers.HUnit.TestCaseRunning
+                   @ Test.Framework.Providers.HUnit.TestCaseResult
+                   @ Test.Framework.Providers.HUnit.TestCase
+                   Test.Framework.Providers.HUnit.$fTestlikeTestCaseRunningTestCaseResultTestCase
+                   Test.Framework.Providers.HUnit.testCase1
+                     `cast`
+                   (Sym (Data.Typeable.Internal.NTCo:Typeable[0]
+                             <*>_N <Test.Framework.Providers.HUnit.TestCase>_N))
+                   Main.commonLenTests90
+                   Main.commonLenTests79
+                     `cast`
+                   (Trans
+                        (Sym (GHC.Types.NTCo:IO[0] <()>_R))
+                        (Sym (Test.Framework.Providers.HUnit.NTCo:TestCase[0])))) -}
+350f4d1b040ff9018a588f89dac55efc
+  commonLenTests79 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ eta2 :: GHC.Prim.State#
+                             GHC.Prim.RealWorld[OneShot] ->
+                 Test.HUnit.Base.@=?7
+                   @ GHC.Types.Int
+                   Main.commonLenTests82
+                     `cast`
+                   (Sym (GHC.IP.NTCo:IP[0] <"loc">_N <GHC.Stack.CallStack>_N))
+                   GHC.Classes.$fEqInt
+                   GHC.Show.$fShowInt
+                   (GHC.Types.[] @ GHC.Types.Char)
+                   Main.commonLenTests81
+                   Main.commonLenTests80
+                   eta2) -}
+7e184a97e6d9ecac0ad821f887c7a821
+  commonLenTests8 :: Test.Framework.Core.Test
+  {- Unfolding: (Test.Framework.Core.Test
+                   @ Test.Framework.Providers.HUnit.TestCaseRunning
+                   @ Test.Framework.Providers.HUnit.TestCaseResult
+                   @ Test.Framework.Providers.HUnit.TestCase
+                   Test.Framework.Providers.HUnit.$fTestlikeTestCaseRunningTestCaseResultTestCase
+                   Test.Framework.Providers.HUnit.testCase1
+                     `cast`
+                   (Sym (Data.Typeable.Internal.NTCo:Typeable[0]
+                             <*>_N <Test.Framework.Providers.HUnit.TestCase>_N))
+                   Main.commonLenTests36
+                   Main.commonLenTests9
+                     `cast`
+                   (Trans
+                        (Sym (GHC.Types.NTCo:IO[0] <()>_R))
+                        (Sym (Test.Framework.Providers.HUnit.NTCo:TestCase[0])))) -}
+921d6828c1de7522b809e15b2b2991a8
+  commonLenTests80 :: GHC.Types.Int
+  {- Unfolding: (Ex01.count
+                   @ GHC.Integer.Type.Integer
+                   @ GHC.Types.Int
+                   GHC.Integer.Type.$fEqInteger
+                   GHC.Num.$fNumInt
+                   (GHC.Types.[] @ GHC.Integer.Type.Integer)
+                   Main.commonLenTests58
+                   Ex01.commonLen1) -}
+d94c494cecc24d47d6437d7dec6764c7
+  commonLenTests81 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 0) -}
+42a2696b133e0c5692639554e5361d57
+  commonLenTests82 :: GHC.Stack.CallStack
+  {- Unfolding: (GHC.Stack.CallStack Main.commonLenTests83) -}
+acabcfe245cd18d03a1c1f46075b1ed2
+  commonLenTests83 :: [([GHC.Types.Char], GHC.SrcLoc.SrcLoc)]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+                   Test.HUnit.Base.@?=2
+                   Main.commonLenTests84) -}
+3120c98cb444eaeae1e03abf3351bce8
+  commonLenTests84 :: [([GHC.Types.Char], GHC.SrcLoc.SrcLoc)]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+                   Main.commonLenTests85
+                   (GHC.Types.[] @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc))) -}
+592b424852c9bfe2a810c19bb2d06611
+  commonLenTests85 :: ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+  {- Unfolding: ((Main.commonLenTests35, Main.commonLenTests86)) -}
+de95f0ea14daa074406f9843203dae7c
+  commonLenTests86 :: GHC.SrcLoc.SrcLoc
+  {- Unfolding: (GHC.SrcLoc.SrcLoc
+                   Main.commonLenTests34
+                   Main.commonLenTests33
+                   Main.commonLenTests32
+                   Main.commonLenTests89
+                   Main.commonLenTests88
+                   Main.commonLenTests89
+                   Main.commonLenTests87) -}
+670ffd475a058d78373ebcaa382ef1b8
+  commonLenTests87 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 39) -}
+aa86a6dceb7e301cc830602ddb52c393
+  commonLenTests88 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 36) -}
+b3a775d8300732e01a49d51d68edb1d9
+  commonLenTests89 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 40) -}
+04ef0dddf473d967fcca3bebef3b663b
+  commonLenTests9 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ eta2 :: GHC.Prim.State#
+                             GHC.Prim.RealWorld[OneShot] ->
+                 Test.HUnit.Base.@=?7
+                   @ GHC.Types.Int
+                   Main.commonLenTests24
+                     `cast`
+                   (Sym (GHC.IP.NTCo:IP[0] <"loc">_N <GHC.Stack.CallStack>_N))
+                   GHC.Classes.$fEqInt
+                   GHC.Show.$fShowInt
+                   (GHC.Types.[] @ GHC.Types.Char)
+                   Main.commonLenTests23
+                   Main.commonLenTests10
+                   eta2) -}
+177c96fbf178a3e0dfe97f8682e46302
+  commonLenTests90 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "empty and <x> share 0 [2 marks]"#) -}
+032e4f2ee38e3432b3f4e47faba00aab
+  commonLenTests91 :: Test.Framework.Core.Test
+  {- Unfolding: (Test.Framework.Core.Test
+                   @ Test.Framework.Providers.HUnit.TestCaseRunning
+                   @ Test.Framework.Providers.HUnit.TestCaseResult
+                   @ Test.Framework.Providers.HUnit.TestCase
+                   Test.Framework.Providers.HUnit.$fTestlikeTestCaseRunningTestCaseResultTestCase
+                   Test.Framework.Providers.HUnit.testCase1
+                     `cast`
+                   (Sym (Data.Typeable.Internal.NTCo:Typeable[0]
+                             <*>_N <Test.Framework.Providers.HUnit.TestCase>_N))
+                   Main.commonLenTests101
+                   Main.commonLenTests92
+                     `cast`
+                   (Trans
+                        (Sym (GHC.Types.NTCo:IO[0] <()>_R))
+                        (Sym (Test.Framework.Providers.HUnit.NTCo:TestCase[0])))) -}
+09e5796c956d64a3ea48c351334528e3
+  commonLenTests92 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ eta2 :: GHC.Prim.State#
+                             GHC.Prim.RealWorld[OneShot] ->
+                 Test.HUnit.Base.@=?7
+                   @ GHC.Types.Int
+                   Main.commonLenTests94
+                     `cast`
+                   (Sym (GHC.IP.NTCo:IP[0] <"loc">_N <GHC.Stack.CallStack>_N))
+                   GHC.Classes.$fEqInt
+                   GHC.Show.$fShowInt
+                   (GHC.Types.[] @ GHC.Types.Char)
+                   Main.commonLenTests23
+                   Main.commonLenTests93
+                   eta2) -}
+ff2c7f0a4d449b91fabdbe03ec2a0357
+  commonLenTests93 :: GHC.Types.Int
+  {- Unfolding: (Ex01.count
+                   @ GHC.Integer.Type.Integer
+                   @ GHC.Types.Int
+                   GHC.Integer.Type.$fEqInteger
+                   GHC.Num.$fNumInt
+                   Main.commonLenTests40
+                   Main.commonLenTests40
+                   Ex01.commonLen1) -}
+b69588994681cd9f3b3465462487e695
+  commonLenTests94 :: GHC.Stack.CallStack
+  {- Unfolding: (GHC.Stack.CallStack Main.commonLenTests95) -}
+72e74dbf626d024fc3671c1e63ed36bd
+  commonLenTests95 :: [([GHC.Types.Char], GHC.SrcLoc.SrcLoc)]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+                   Test.HUnit.Base.@?=2
+                   Main.commonLenTests96) -}
+2ed615286f055ac0b2142481a660f1f7
+  commonLenTests96 :: [([GHC.Types.Char], GHC.SrcLoc.SrcLoc)]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+                   Main.commonLenTests97
+                   (GHC.Types.[] @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc))) -}
+410b872d8744ed09c087da65cfa64733
+  commonLenTests97 :: ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+  {- Unfolding: ((Main.commonLenTests35, Main.commonLenTests98)) -}
+61baedd24c689a15657174eb04cb4117
+  commonLenTests98 :: GHC.SrcLoc.SrcLoc
+  {- Unfolding: (GHC.SrcLoc.SrcLoc
+                   Main.commonLenTests34
+                   Main.commonLenTests33
+                   Main.commonLenTests32
+                   Main.commonLenTests100
+                   Main.commonLenTests99
+                   Main.commonLenTests100
+                   Main.commonLenTests31) -}
+d3d2856fbdd84344181d887c68458b90
+  commonLenTests99 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 45) -}
+0e9d10b5b28aa8d9ebd74f381b8e7c30
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
+a62d52fe9a1880fb4ae8f149afaa380a
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case System.Environment.getArgs1 eta of ds1 { (#,#) ipv ipv1 ->
+                 case Test.Framework.Runners.Console.defaultMain7
+                        ipv1
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case Test.Framework.Runners.Console.defaultMain4
+                        ipv3
+                        ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                 case ipv5 of ww { Test.Framework.Runners.Options.RunnerOptions ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ->
+                 Test.Framework.Runners.Console.$wa
+                   Main.tests
+                   ww1
+                   ww2
+                   ww3
+                   ww4
+                   ww5
+                   ww6
+                   ww7
+                   ww8
+                   ipv4 } } } }) -}
+b80df72ebfe341fd97ce9949a637242d
+  main2 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R))) -}
+a717e1f4e60bbe70c8b6203712f82f7b
+  nthTests :: Test.Framework.Core.Test
+  {- Strictness: m2,
+     Unfolding: (Test.Framework.Core.TestGroup
+                   Main.nthTests70
+                   Main.nthTests1) -}
+bb20d5450d3c2501e8b4167562b779ff
+  nthTests1 :: [Test.Framework.Core.Test]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Test.Framework.Core.Test
+                   Main.nthTests59
+                   Main.nthTests2) -}
+8e0a49751dc80fbca04dfd42e5a3fb5d
+  nthTests10 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (__integer 20) -}
+9edf9710f36b897350e4263482aec8ff
+  nthTests11 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (__integer 10) -}
+6f9301ba21078fe127efd54b0affb31f
+  nthTests12 :: GHC.Stack.CallStack
+  {- Unfolding: (GHC.Stack.CallStack Main.nthTests13) -}
+f5265f5a21c63de3a996b836243d28a7
+  nthTests13 :: [([GHC.Types.Char], GHC.SrcLoc.SrcLoc)]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+                   Test.HUnit.Base.@?=2
+                   Main.nthTests14) -}
+b0ed360bc9edf3c2af967e61cdb895cf
+  nthTests14 :: [([GHC.Types.Char], GHC.SrcLoc.SrcLoc)]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+                   Main.nthTests15
+                   (GHC.Types.[] @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc))) -}
+48cf778624daf9061cba01c121af6702
+  nthTests15 :: ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+  {- Unfolding: ((Main.commonLenTests35, Main.nthTests16)) -}
+84cd246071efa89693c1fb2c0ba7788d
+  nthTests16 :: GHC.SrcLoc.SrcLoc
+  {- Unfolding: (GHC.SrcLoc.SrcLoc
+                   Main.commonLenTests34
+                   Main.commonLenTests33
+                   Main.commonLenTests32
+                   Main.nthTests19
+                   Main.nthTests18
+                   Main.nthTests19
+                   Main.nthTests17) -}
+6d566d11daa071db599e450aacfe5916
+  nthTests17 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 76) -}
+3f49b879a26d2e29f741433fa7991aea
+  nthTests18 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 73) -}
+e61e8319a7cd3807ceabe04c309b8a82
+  nthTests19 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 29) -}
+8b185074881cf80e62a9d6c276536664
+  nthTests2 :: [Test.Framework.Core.Test]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Test.Framework.Core.Test
+                   Main.nthTests48
+                   Main.nthTests3) -}
+97138522bb679a2740ec1c55138e870a
+  nthTests20 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "nth 10 returns 10th element [2 marks]"#) -}
+bad93747a1aa2f0a46047a02ee52f9e2
+  nthTests21 :: Test.Framework.Core.Test
+  {- Unfolding: (Test.Framework.Core.Test
+                   @ Test.Framework.Providers.HUnit.TestCaseRunning
+                   @ Test.Framework.Providers.HUnit.TestCaseResult
+                   @ Test.Framework.Providers.HUnit.TestCase
+                   Test.Framework.Providers.HUnit.$fTestlikeTestCaseRunningTestCaseResultTestCase
+                   Test.Framework.Providers.HUnit.testCase1
+                     `cast`
+                   (Sym (Data.Typeable.Internal.NTCo:Typeable[0]
+                             <*>_N <Test.Framework.Providers.HUnit.TestCase>_N))
+                   Main.nthTests34
+                   Main.nthTests22
+                     `cast`
+                   (Trans
+                        (Sym (GHC.Types.NTCo:IO[0] <()>_R))
+                        (Sym (Test.Framework.Providers.HUnit.NTCo:TestCase[0])))) -}
+845aa7492a1de2ee5d6b63da325f6b0f
+  nthTests22 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ eta2 :: GHC.Prim.State#
+                             GHC.Prim.RealWorld[OneShot] ->
+                 Test.HUnit.Base.@=?7
+                   @ GHC.Types.Char
+                   Main.nthTests26
+                     `cast`
+                   (Sym (GHC.IP.NTCo:IP[0] <"loc">_N <GHC.Stack.CallStack>_N))
+                   GHC.Classes.$fEqChar
+                   GHC.Show.$fShowChar
+                   (GHC.Types.[] @ GHC.Types.Char)
+                   Main.nthTests25
+                   Main.nthTests23
+                   eta2) -}
+d587e3e87b31fe2edc80636a9de6861a
+  nthTests23 :: GHC.Types.Char
+  {- Unfolding: (Ex01.$wnth @ GHC.Types.Char 3 Main.nthTests24) -}
+83748052cf98f366c846d4497e9ce82e
+  nthTests24 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "abcd"#) -}
+444fab947688e905e523baf2ce842c27
+  nthTests25 :: GHC.Types.Char
+  {- HasNoCafRefs, Unfolding: (GHC.Types.C# 'c') -}
+ea8fb58af15f6492039e32f0b0d50031
+  nthTests26 :: GHC.Stack.CallStack
+  {- Unfolding: (GHC.Stack.CallStack Main.nthTests27) -}
+af518ae0295343e848ec2531d790a050
+  nthTests27 :: [([GHC.Types.Char], GHC.SrcLoc.SrcLoc)]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+                   Test.HUnit.Base.@?=2
+                   Main.nthTests28) -}
+ea910b2c6afa5b211152c56f0376a9f8
+  nthTests28 :: [([GHC.Types.Char], GHC.SrcLoc.SrcLoc)]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+                   Main.nthTests29
+                   (GHC.Types.[] @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc))) -}
+538cfff0397ab3710234029d173a6695
+  nthTests29 :: ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+  {- Unfolding: ((Main.commonLenTests35, Main.nthTests30)) -}
+cd1e0c1f4ece6355d3b40e54ca4d94c7
+  nthTests3 :: [Test.Framework.Core.Test]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Test.Framework.Core.Test
+                   Main.nthTests35
+                   Main.nthTests4) -}
+0374224a43bdfcfb5e8b28b5c631f51f
+  nthTests30 :: GHC.SrcLoc.SrcLoc
+  {- Unfolding: (GHC.SrcLoc.SrcLoc
+                   Main.commonLenTests34
+                   Main.commonLenTests33
+                   Main.commonLenTests32
+                   Main.nthTests33
+                   Main.nthTests32
+                   Main.nthTests33
+                   Main.nthTests31) -}
+cb7187e87168e3d14f926bc9512366bb
+  nthTests31 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 70) -}
+839e8c446abe3fb1f591060757be2dce
+  nthTests32 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 67) -}
+e44dd636c6719f7b24e6238ad9d509ee
+  nthTests33 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 28) -}
+85694da84b8e21115d4293be44e33a14
+  nthTests34 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "nth 3 still returns 3rd [2 marks]"#) -}
+4d131490cb441152d2e78fefcf8ddbb3
+  nthTests35 :: Test.Framework.Core.Test
+  {- Unfolding: (Test.Framework.Core.Test
+                   @ Test.Framework.Providers.HUnit.TestCaseRunning
+                   @ Test.Framework.Providers.HUnit.TestCaseResult
+                   @ Test.Framework.Providers.HUnit.TestCase
+                   Test.Framework.Providers.HUnit.$fTestlikeTestCaseRunningTestCaseResultTestCase
+                   Test.Framework.Providers.HUnit.testCase1
+                     `cast`
+                   (Sym (Data.Typeable.Internal.NTCo:Typeable[0]
+                             <*>_N <Test.Framework.Providers.HUnit.TestCase>_N))
+                   Main.nthTests47
+                   Main.nthTests36
+                     `cast`
+                   (Trans
+                        (Sym (GHC.Types.NTCo:IO[0] <()>_R))
+                        (Sym (Test.Framework.Providers.HUnit.NTCo:TestCase[0])))) -}
+1727cccf8d5f9561072514a95b3a71d0
+  nthTests36 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ eta2 :: GHC.Prim.State#
+                             GHC.Prim.RealWorld[OneShot] ->
+                 Test.HUnit.Base.@=?7
+                   @ GHC.Types.Char
+                   Main.nthTests39
+                     `cast`
+                   (Sym (GHC.IP.NTCo:IP[0] <"loc">_N <GHC.Stack.CallStack>_N))
+                   GHC.Classes.$fEqChar
+                   GHC.Show.$fShowChar
+                   (GHC.Types.[] @ GHC.Types.Char)
+                   Main.nthTests25
+                   Main.nthTests37
+                   eta2) -}
+87a5b1370b88fe337cc63bb8673a13f0
+  nthTests37 :: GHC.Types.Char
+  {- Unfolding: (Ex01.$wnth @ GHC.Types.Char 3 Main.nthTests38) -}
+9b535447f76fec486472a398f4f729bf
+  nthTests38 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "abc"#) -}
+f7db5e992704ab18eac529f5e95915b3
+  nthTests39 :: GHC.Stack.CallStack
+  {- Unfolding: (GHC.Stack.CallStack Main.nthTests40) -}
+d1cd817fab20d5256cde9bd6b850c034
+  nthTests4 :: [Test.Framework.Core.Test]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Test.Framework.Core.Test
+                   Main.nthTests21
+                   Main.nthTests5) -}
+e06953aa13c04c023dc00be399fc86d3
+  nthTests40 :: [([GHC.Types.Char], GHC.SrcLoc.SrcLoc)]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+                   Test.HUnit.Base.@?=2
+                   Main.nthTests41) -}
+53925744e51524bd199d88b62c810174
+  nthTests41 :: [([GHC.Types.Char], GHC.SrcLoc.SrcLoc)]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+                   Main.nthTests42
+                   (GHC.Types.[] @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc))) -}
+6b318ea11d68a25d7e82292696de224d
+  nthTests42 :: ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+  {- Unfolding: ((Main.commonLenTests35, Main.nthTests43)) -}
+df729b426109004207a57b2f89b68465
+  nthTests43 :: GHC.SrcLoc.SrcLoc
+  {- Unfolding: (GHC.SrcLoc.SrcLoc
+                   Main.commonLenTests34
+                   Main.commonLenTests33
+                   Main.commonLenTests32
+                   Main.nthTests46
+                   Main.nthTests45
+                   Main.nthTests46
+                   Main.nthTests44) -}
+12c72210a0d87eaa627e22560f6d0eda
+  nthTests44 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 71) -}
+624395cbec5f9e77b6417c0e872cfffa
+  nthTests45 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 68) -}
+1c8001abb100f199165ef7f56f8bfb33
+  nthTests46 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 27) -}
+1f4b253f46e9d96dc81decbb6d29632c
+  nthTests47 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "nth 3 returns 3rd element [2 marks]"#) -}
+5e15488d390b8b5c087230f8fc4cb53c
+  nthTests48 :: Test.Framework.Core.Test
+  {- Unfolding: (Test.Framework.Core.Test
+                   @ Test.Framework.Providers.HUnit.TestCaseRunning
+                   @ Test.Framework.Providers.HUnit.TestCaseResult
+                   @ Test.Framework.Providers.HUnit.TestCase
+                   Test.Framework.Providers.HUnit.$fTestlikeTestCaseRunningTestCaseResultTestCase
+                   Test.Framework.Providers.HUnit.testCase1
+                     `cast`
+                   (Sym (Data.Typeable.Internal.NTCo:Typeable[0]
+                             <*>_N <Test.Framework.Providers.HUnit.TestCase>_N))
+                   Main.nthTests58
+                   Main.nthTests49
+                     `cast`
+                   (Trans
+                        (Sym (GHC.Types.NTCo:IO[0] <()>_R))
+                        (Sym (Test.Framework.Providers.HUnit.NTCo:TestCase[0])))) -}
+ddac032a433fc9da8656c7998ac22ea3
+  nthTests49 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ eta2 :: GHC.Prim.State#
+                             GHC.Prim.RealWorld[OneShot] ->
+                 Test.HUnit.Base.@=?7
+                   @ GHC.Types.Char
+                   Main.nthTests52
+                     `cast`
+                   (Sym (GHC.IP.NTCo:IP[0] <"loc">_N <GHC.Stack.CallStack>_N))
+                   GHC.Classes.$fEqChar
+                   GHC.Show.$fShowChar
+                   (GHC.Types.[] @ GHC.Types.Char)
+                   Main.nthTests51
+                   Main.nthTests50
+                   eta2) -}
+3d918426da7fa0171d3afd05693698fe
+  nthTests5 :: [Test.Framework.Core.Test]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Test.Framework.Core.Test
+                   Main.nthTests6
+                   (GHC.Types.[] @ Test.Framework.Core.Test)) -}
+3ffb0959dda10aa938bcf80a159f70ef
+  nthTests50 :: GHC.Types.Char
+  {- Unfolding: (Ex01.$wnth @ GHC.Types.Char 2 Main.nthTests38) -}
+86deda5fac783eb59d6ee9d767640167
+  nthTests51 :: GHC.Types.Char
+  {- HasNoCafRefs, Unfolding: (GHC.Types.C# 'b') -}
+f221981d87f0db648c4c7961ebffb933
+  nthTests52 :: GHC.Stack.CallStack
+  {- Unfolding: (GHC.Stack.CallStack Main.nthTests53) -}
+830ed0c0d61b7a0d1383338569074c84
+  nthTests53 :: [([GHC.Types.Char], GHC.SrcLoc.SrcLoc)]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+                   Test.HUnit.Base.@?=2
+                   Main.nthTests54) -}
+2d3f8cfbbfeb0ad7dee311b98a2db590
+  nthTests54 :: [([GHC.Types.Char], GHC.SrcLoc.SrcLoc)]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+                   Main.nthTests55
+                   (GHC.Types.[] @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc))) -}
+03c9cf974f96f155dc61bf803419c672
+  nthTests55 :: ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+  {- Unfolding: ((Main.commonLenTests35, Main.nthTests56)) -}
+31437e9aab260b37f6f48e447df595ce
+  nthTests56 :: GHC.SrcLoc.SrcLoc
+  {- Unfolding: (GHC.SrcLoc.SrcLoc
+                   Main.commonLenTests34
+                   Main.commonLenTests33
+                   Main.commonLenTests32
+                   Main.nthTests57
+                   Main.nthTests45
+                   Main.nthTests57
+                   Main.nthTests44) -}
+ab22eed8f5cfeb16ed3184b6b6cecf0f
+  nthTests57 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 26) -}
+74b54e9bdfd9e5c74c1a679c733332fc
+  nthTests58 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "nth 2 returns 2nd element [2 marks]"#) -}
+36831bfd5577f8681660a3bb6166f1c8
+  nthTests59 :: Test.Framework.Core.Test
+  {- Unfolding: (Test.Framework.Core.Test
+                   @ Test.Framework.Providers.HUnit.TestCaseRunning
+                   @ Test.Framework.Providers.HUnit.TestCaseResult
+                   @ Test.Framework.Providers.HUnit.TestCase
+                   Test.Framework.Providers.HUnit.$fTestlikeTestCaseRunningTestCaseResultTestCase
+                   Test.Framework.Providers.HUnit.testCase1
+                     `cast`
+                   (Sym (Data.Typeable.Internal.NTCo:Typeable[0]
+                             <*>_N <Test.Framework.Providers.HUnit.TestCase>_N))
+                   Main.nthTests69
+                   Main.nthTests60
+                     `cast`
+                   (Trans
+                        (Sym (GHC.Types.NTCo:IO[0] <()>_R))
+                        (Sym (Test.Framework.Providers.HUnit.NTCo:TestCase[0])))) -}
+0f10baa590facc31c701a4a1069dee84
+  nthTests6 :: Test.Framework.Core.Test
+  {- Unfolding: (Test.Framework.Core.Test
+                   @ Test.Framework.Providers.HUnit.TestCaseRunning
+                   @ Test.Framework.Providers.HUnit.TestCaseResult
+                   @ Test.Framework.Providers.HUnit.TestCase
+                   Test.Framework.Providers.HUnit.$fTestlikeTestCaseRunningTestCaseResultTestCase
+                   Test.Framework.Providers.HUnit.testCase1
+                     `cast`
+                   (Sym (Data.Typeable.Internal.NTCo:Typeable[0]
+                             <*>_N <Test.Framework.Providers.HUnit.TestCase>_N))
+                   Main.nthTests20
+                   Main.nthTests7
+                     `cast`
+                   (Trans
+                        (Sym (GHC.Types.NTCo:IO[0] <()>_R))
+                        (Sym (Test.Framework.Providers.HUnit.NTCo:TestCase[0])))) -}
+a5b8162836180b06e9ce0d16c2846fb3
+  nthTests60 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ eta2 :: GHC.Prim.State#
+                             GHC.Prim.RealWorld[OneShot] ->
+                 Test.HUnit.Base.@=?7
+                   @ GHC.Types.Char
+                   Main.nthTests63
+                     `cast`
+                   (Sym (GHC.IP.NTCo:IP[0] <"loc">_N <GHC.Stack.CallStack>_N))
+                   GHC.Classes.$fEqChar
+                   GHC.Show.$fShowChar
+                   (GHC.Types.[] @ GHC.Types.Char)
+                   Main.nthTests62
+                   Main.nthTests61
+                   eta2) -}
+1d7a3be37b8eba3d6b7993d2cf754e30
+  nthTests61 :: GHC.Types.Char
+  {- Unfolding: (Ex01.$wnth @ GHC.Types.Char 1 Main.nthTests38) -}
+7de8311ff864740245f4750f43b2cdbc
+  nthTests62 :: GHC.Types.Char
+  {- HasNoCafRefs, Unfolding: (GHC.Types.C# 'a') -}
+bdade9724047b66af1039023b9353780
+  nthTests63 :: GHC.Stack.CallStack
+  {- Unfolding: (GHC.Stack.CallStack Main.nthTests64) -}
+b97f780fc72a3e8b12e755ee2d51ace5
+  nthTests64 :: [([GHC.Types.Char], GHC.SrcLoc.SrcLoc)]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+                   Test.HUnit.Base.@?=2
+                   Main.nthTests65) -}
+9978535b41626fe3f3b6cad845a57af0
+  nthTests65 :: [([GHC.Types.Char], GHC.SrcLoc.SrcLoc)]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+                   Main.nthTests66
+                   (GHC.Types.[] @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc))) -}
+92691198ad1de4e9ce9d0dcd118edf61
+  nthTests66 :: ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+  {- Unfolding: ((Main.commonLenTests35, Main.nthTests67)) -}
+0940dcec3b0b80dc0650a88ff8307a47
+  nthTests67 :: GHC.SrcLoc.SrcLoc
+  {- Unfolding: (GHC.SrcLoc.SrcLoc
+                   Main.commonLenTests34
+                   Main.commonLenTests33
+                   Main.commonLenTests32
+                   Main.nthTests68
+                   Main.nthTests45
+                   Main.nthTests68
+                   Main.nthTests44) -}
+452206f9432893e8f8a32ee368cd6a81
+  nthTests68 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 25) -}
+d7161702c3bfb1cd4a269a00caaff574
+  nthTests69 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "nth 1 returns 1st element [2 marks]"#) -}
+0a93de044be39d7785383caacd30ee1b
+  nthTests7 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ eta2 :: GHC.Prim.State#
+                             GHC.Prim.RealWorld[OneShot] ->
+                 Test.HUnit.Base.@=?7
+                   @ GHC.Integer.Type.Integer
+                   Main.nthTests12
+                     `cast`
+                   (Sym (GHC.IP.NTCo:IP[0] <"loc">_N <GHC.Stack.CallStack>_N))
+                   GHC.Integer.Type.$fEqInteger
+                   GHC.Show.$fShowInteger
+                   (GHC.Types.[] @ GHC.Types.Char)
+                   Main.nthTests11
+                   Main.nthTests8
+                   eta2) -}
+d6eb3db5a0118bae696832ee4f6f9209
+  nthTests70 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "\n\
+                   \Testing 'nth' (10 marks)"#) -}
+869acfec8733279f0f81c33566a9b8f8
+  nthTests8 :: GHC.Integer.Type.Integer
+  {- Unfolding: (Ex01.$wnth
+                   @ GHC.Integer.Type.Integer
+                   10
+                   Main.nthTests9) -}
+8efb91700a595dba3f017da1bf295eb5
+  nthTests9 :: [GHC.Integer.Type.Integer]
+  {- Unfolding: (GHC.Enum.enumDeltaToInteger
+                   Main.commonLenTests18
+                   Main.commonLenTests18
+                   Main.nthTests10) -}
+480b9fbe1f5ef1a67cbc7aa548191462
+  raiseTests :: Test.Framework.Core.Test
+  {- Strictness: m2,
+     Unfolding: (Test.Framework.Core.TestGroup
+                   Main.raiseTests41
+                   Main.raiseTests1) -}
+f759b8da15af6bf90f23fa48708ea982
+  raiseTests1 :: [Test.Framework.Core.Test]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Test.Framework.Core.Test
+                   Main.raiseTests29
+                   Main.raiseTests2) -}
+c1a7937e6ec59d1bb1d4e3bbc097f908
+  raiseTests10 :: ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+  {- Unfolding: ((Main.commonLenTests35, Main.raiseTests11)) -}
+45f1a3d65eb3eefa2058f4c5767de951
+  raiseTests11 :: GHC.SrcLoc.SrcLoc
+  {- Unfolding: (GHC.SrcLoc.SrcLoc
+                   Main.commonLenTests34
+                   Main.commonLenTests33
+                   Main.commonLenTests32
+                   Main.raiseTests14
+                   Main.raiseTests13
+                   Main.raiseTests14
+                   Main.raiseTests12) -}
+716c718dba8e4ec34352bb53b5edb300
+  raiseTests12 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 75) -}
+b9788fdbe8b280c4c1d427926b009330
+  raiseTests13 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 72) -}
+4c4dd874873897e5ccdd071bc5b7d4f0
+  raiseTests14 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 18) -}
+91bf08b45e2d1fef94e6c8518538c672
+  raiseTests15 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "raise empty string returns empty [2 marks]"#) -}
+673c1c1556ed9afa057e51a9ade477b8
+  raiseTests16 :: Test.Framework.Core.Test
+  {- Unfolding: (Test.Framework.Core.Test
+                   @ Test.Framework.Providers.HUnit.TestCaseRunning
+                   @ Test.Framework.Providers.HUnit.TestCaseResult
+                   @ Test.Framework.Providers.HUnit.TestCase
+                   Test.Framework.Providers.HUnit.$fTestlikeTestCaseRunningTestCaseResultTestCase
+                   Test.Framework.Providers.HUnit.testCase1
+                     `cast`
+                   (Sym (Data.Typeable.Internal.NTCo:Typeable[0]
+                             <*>_N <Test.Framework.Providers.HUnit.TestCase>_N))
+                   Main.raiseTests28
+                   Main.raiseTests17
+                     `cast`
+                   (Trans
+                        (Sym (GHC.Types.NTCo:IO[0] <()>_R))
+                        (Sym (Test.Framework.Providers.HUnit.NTCo:TestCase[0])))) -}
+da29655dbe130f5539524767dea9dc03
+  raiseTests17 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ eta2 :: GHC.Prim.State#
+                             GHC.Prim.RealWorld[OneShot] ->
+                 Test.HUnit.Base.@=?7
+                   @ [GHC.Types.Char]
+                   Main.raiseTests21
+                     `cast`
+                   (Sym (GHC.IP.NTCo:IP[0] <"loc">_N <GHC.Stack.CallStack>_N))
+                   GHC.Classes.$fEq[]_$s$fEq[]1
+                   GHC.Show.$fShow[]_$s$fShow[]1
+                   (GHC.Types.[] @ GHC.Types.Char)
+                   Main.raiseTests20
+                   Main.raiseTests18
+                   eta2) -}
+8a2021d8bcf657be1f431278234d3a66
+  raiseTests18 :: [GHC.Types.Char]
+  {- Unfolding: (Ex01.raise Main.raiseTests19) -}
+8c1d8f04b08b641396aaa6646acb8ee8
+  raiseTests19 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "ZyZ"#) -}
+40c3f1dd5f5b25f3eeb6db69235c1df4
+  raiseTests2 :: [Test.Framework.Core.Test]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Test.Framework.Core.Test
+                   Main.raiseTests16
+                   Main.raiseTests3) -}
+f2b44a09e244501ef627f197079591f8
+  raiseTests20 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "ZYZ"#) -}
+5000228360320d28ba60b5e8067e089f
+  raiseTests21 :: GHC.Stack.CallStack
+  {- Unfolding: (GHC.Stack.CallStack Main.raiseTests22) -}
+29b87dd6dd2cf9dc3355583be353f789
+  raiseTests22 :: [([GHC.Types.Char], GHC.SrcLoc.SrcLoc)]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+                   Test.HUnit.Base.@?=2
+                   Main.raiseTests23) -}
+e61374e04ac6ec0b7f3e9291be8d8e3e
+  raiseTests23 :: [([GHC.Types.Char], GHC.SrcLoc.SrcLoc)]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+                   Main.raiseTests24
+                   (GHC.Types.[] @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc))) -}
+308b942e5c2a9abc08e87a7068529a44
+  raiseTests24 :: ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+  {- Unfolding: ((Main.commonLenTests35, Main.raiseTests25)) -}
+d2d82008841230322006147d8c71e04e
+  raiseTests25 :: GHC.SrcLoc.SrcLoc
+  {- Unfolding: (GHC.SrcLoc.SrcLoc
+                   Main.commonLenTests34
+                   Main.commonLenTests33
+                   Main.commonLenTests32
+                   Main.raiseTests27
+                   Main.raiseTests26
+                   Main.raiseTests27
+                   Main.nthTests32) -}
+1e98853085bac57c2f68f6867fce316f
+  raiseTests26 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 64) -}
+f52f892746c3bf887720e5d34df16bb7
+  raiseTests27 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 17) -}
+53057669540e731d9a6bdc12fe12b9ca
+  raiseTests28 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "raise ZyZ returns XYZ [2 marks]"#) -}
+88f38c7518e5eb89ed9793fb2f98f89c
+  raiseTests29 :: Test.Framework.Core.Test
+  {- Unfolding: (Test.Framework.Core.Test
+                   @ Test.Framework.Providers.HUnit.TestCaseRunning
+                   @ Test.Framework.Providers.HUnit.TestCaseResult
+                   @ Test.Framework.Providers.HUnit.TestCase
+                   Test.Framework.Providers.HUnit.$fTestlikeTestCaseRunningTestCaseResultTestCase
+                   Test.Framework.Providers.HUnit.testCase1
+                     `cast`
+                   (Sym (Data.Typeable.Internal.NTCo:Typeable[0]
+                             <*>_N <Test.Framework.Providers.HUnit.TestCase>_N))
+                   Main.raiseTests40
+                   Main.raiseTests30
+                     `cast`
+                   (Trans
+                        (Sym (GHC.Types.NTCo:IO[0] <()>_R))
+                        (Sym (Test.Framework.Providers.HUnit.NTCo:TestCase[0])))) -}
+89f41a37e59cd0fea3d69bbc6fbd2792
+  raiseTests3 :: [Test.Framework.Core.Test]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Test.Framework.Core.Test
+                   Main.raiseTests4
+                   (GHC.Types.[] @ Test.Framework.Core.Test)) -}
+076c11680ca12252b295b7643b128f78
+  raiseTests30 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ eta2 :: GHC.Prim.State#
+                             GHC.Prim.RealWorld[OneShot] ->
+                 Test.HUnit.Base.@=?7
+                   @ [GHC.Types.Char]
+                   Main.raiseTests34
+                     `cast`
+                   (Sym (GHC.IP.NTCo:IP[0] <"loc">_N <GHC.Stack.CallStack>_N))
+                   GHC.Classes.$fEq[]_$s$fEq[]1
+                   GHC.Show.$fShow[]_$s$fShow[]1
+                   (GHC.Types.[] @ GHC.Types.Char)
+                   Main.raiseTests33
+                   Main.raiseTests31
+                   eta2) -}
+b6e7fc699fda3d583b9f9545e4887b04
+  raiseTests31 :: [GHC.Types.Char]
+  {- Unfolding: (Ex01.raise Main.raiseTests32) -}
+1572e92cae4264d1c717b12e4f9c8dca
+  raiseTests32 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "0abc$"#) -}
+54eb18875f89d5659be9745523dde241
+  raiseTests33 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "0ABC$"#) -}
+87e11da590d77742c53813ef80b299c7
+  raiseTests34 :: GHC.Stack.CallStack
+  {- Unfolding: (GHC.Stack.CallStack Main.raiseTests35) -}
+493f5bb9071b5b90f3dd9ecd9a591694
+  raiseTests35 :: [([GHC.Types.Char], GHC.SrcLoc.SrcLoc)]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+                   Test.HUnit.Base.@?=2
+                   Main.raiseTests36) -}
+0a620d8af6a45c5a62a0ae01741bd716
+  raiseTests36 :: [([GHC.Types.Char], GHC.SrcLoc.SrcLoc)]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+                   Main.raiseTests37
+                   (GHC.Types.[] @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc))) -}
+8d3a55c45720d9793b8493a7a599aebe
+  raiseTests37 :: ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+  {- Unfolding: ((Main.commonLenTests35, Main.raiseTests38)) -}
+0f772cc83806784f59246cca59b5f4a2
+  raiseTests38 :: GHC.SrcLoc.SrcLoc
+  {- Unfolding: (GHC.SrcLoc.SrcLoc
+                   Main.commonLenTests34
+                   Main.commonLenTests33
+                   Main.commonLenTests32
+                   Main.raiseTests39
+                   Main.nthTests31
+                   Main.raiseTests39
+                   Main.nthTests18) -}
+e22960e0e078a51f25c5b721bf177cd7
+  raiseTests39 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 16) -}
+850b122c1b345acd1fb1fbdb145d793e
+  raiseTests4 :: Test.Framework.Core.Test
+  {- Unfolding: (Test.Framework.Core.Test
+                   @ Test.Framework.Providers.HUnit.TestCaseRunning
+                   @ Test.Framework.Providers.HUnit.TestCaseResult
+                   @ Test.Framework.Providers.HUnit.TestCase
+                   Test.Framework.Providers.HUnit.$fTestlikeTestCaseRunningTestCaseResultTestCase
+                   Test.Framework.Providers.HUnit.testCase1
+                     `cast`
+                   (Sym (Data.Typeable.Internal.NTCo:Typeable[0]
+                             <*>_N <Test.Framework.Providers.HUnit.TestCase>_N))
+                   Main.raiseTests15
+                   Main.raiseTests5
+                     `cast`
+                   (Trans
+                        (Sym (GHC.Types.NTCo:IO[0] <()>_R))
+                        (Sym (Test.Framework.Providers.HUnit.NTCo:TestCase[0])))) -}
+f82372d4ad879f8925aa03d4a5e3ecdd
+  raiseTests40 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "raise 0abc$ returns 0ABC$ [2 marks]"#) -}
+c028de0cad6a47f0b17d440293897e70
+  raiseTests41 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "\n\
+                   \Testing 'raise' (6 marks)"#) -}
+33b5445fdc787e206d71ffab3b17d5c1
+  raiseTests5 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ eta2 :: GHC.Prim.State#
+                             GHC.Prim.RealWorld[OneShot] ->
+                 Test.HUnit.Base.@=?7
+                   @ [GHC.Types.Char]
+                   Main.raiseTests7
+                     `cast`
+                   (Sym (GHC.IP.NTCo:IP[0] <"loc">_N <GHC.Stack.CallStack>_N))
+                   GHC.Classes.$fEq[]_$s$fEq[]1
+                   GHC.Show.$fShow[]_$s$fShow[]1
+                   (GHC.Types.[] @ GHC.Types.Char)
+                   (GHC.Types.[] @ GHC.Types.Char)
+                   Main.raiseTests6
+                   eta2) -}
+e5a11ff0b18b71220bc46ad846801e7e
+  raiseTests6 :: [GHC.Types.Char]
+  {- Unfolding: (Ex01.raise (GHC.Types.[] @ GHC.Types.Char)) -}
+800b6a9555a9770c66345cb247b36bd3
+  raiseTests7 :: GHC.Stack.CallStack
+  {- Unfolding: (GHC.Stack.CallStack Main.raiseTests8) -}
+2b139e20d91a26c3d155422d7f9708d7
+  raiseTests8 :: [([GHC.Types.Char], GHC.SrcLoc.SrcLoc)]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+                   Test.HUnit.Base.@?=2
+                   Main.raiseTests9) -}
+16206ebf2f23ee321f0e3f9c1f4b2889
+  raiseTests9 :: [([GHC.Types.Char], GHC.SrcLoc.SrcLoc)]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+                   Main.raiseTests10
+                   (GHC.Types.[] @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc))) -}
+74ece62b021a5601db079949c786e74e
+  tests :: [Test.Framework.Core.Test]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Test.Framework.Core.Test
+                   Main.tests1
+                   (GHC.Types.[] @ Test.Framework.Core.Test)) -}
+2204846ae51efc857c639a71ae3c3658
+  tests1 :: Test.Framework.Core.Test
+  {- Strictness: m2,
+     Unfolding: (Test.Framework.Core.TestGroup
+                   Main.tests5
+                   Main.tests2) -}
+9af4a80862903d6c0d3759d04c1399af
+  tests2 :: [Test.Framework.Core.Test]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Test.Framework.Core.Test
+                   Main.raiseTests
+                   Main.tests3) -}
+e1060095063e9456e1f14ebf3e04a80f
+  tests3 :: [Test.Framework.Core.Test]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Test.Framework.Core.Test
+                   Main.nthTests
+                   Main.tests4) -}
+a7664f515161d1f9c1d9e806b283c9ea
+  tests4 :: [Test.Framework.Core.Test]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Test.Framework.Core.Test
+                   Main.commonLenTests
+                   (GHC.Types.[] @ Test.Framework.Core.Test)) -}
+03448cdf92334d825b2fdec47b61e84f
+  tests5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "\n\
+                   \\n\
+                   \Exercise 01 Tests (30 marks)\n"#) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+
