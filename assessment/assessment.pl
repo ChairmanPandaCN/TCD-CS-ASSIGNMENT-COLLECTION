@@ -13,10 +13,10 @@ add(p(X),Y,p(Z)) :- add(X,Y,Z).
 
 
 
-add2(p(s(X)),Y,Z) :- add2(X,Y,Z).
-add2(s(p(X)),Y,Z) :- add2(X,Y,Z).
-add2(X,p(s(Y)),Z) :- add2(X,Y,Z).
-add2(X,s(p(Y)),Z) :- add2(X,Y,Z).
+add2(p(X),Y,Z) :- add2(X,p(0),W),add2(W,Y,Z).
+add2(s(X),Y,Z) :- add2(X,s(0),W),add2(W,Y,Z).
+add2(X,p(Y),Z) :- add2(p(0),Y,W),add2(X,W,Z).
+add2(X,s(Y),Z) :- add2(s(0),Y,W),add2(X,W,Z).
 
 
 add2(0,X+Y,Z) :- add2(X,Y,Z).
