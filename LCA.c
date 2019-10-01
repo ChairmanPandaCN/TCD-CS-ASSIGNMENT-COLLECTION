@@ -49,7 +49,7 @@ int main()
     int n1 = 10, n2 = 14;
     struct node *t = lca(root, n1, n2);
     printf("LCA of %d and %d is %d \n", n1, n2, t->data);
-
+    check("LCA of 10 and 14", lca(root, n1, n2), 12);
     n1 = 14, n2 = 8;
     t = lca(root, n1, n2);
     printf("LCA of %d and %d is %d \n", n1, n2, t->data);
