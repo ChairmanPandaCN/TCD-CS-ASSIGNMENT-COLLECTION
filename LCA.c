@@ -34,6 +34,20 @@ struct node *newNode(int data)
     return (node);
 }
 
+void check(char *s, _int64 v, _int64 expected)
+{
+    cout << s << " = " << v;
+    if (v == expected)
+    {
+        cout << " OK";
+    }
+    else
+    {
+        cout << " ERROR: should be " << expected;
+    }
+    cout << endl;
+}
+
 /* Driver program to test lca() */
 int main()
 {
