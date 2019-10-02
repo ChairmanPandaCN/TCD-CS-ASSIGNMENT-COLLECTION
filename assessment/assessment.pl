@@ -21,9 +21,6 @@ add2(X,s(p(Y)),Z):- add2(X,Y,Z).
 add2(X,p(s(Y)),Z):- add2(X,Y,Z).
 add2(p(X),s(Y),Z):- add2(X,Y,Z).
 add2(s(X),p(Y),Z):- add2(X,Y,Z).
-
-
-
 add2(X+Y,s(A+B),Z) :- add2(X,Y,W), add2(s(0),A+B,C),add2(W,C,Z).
 add2(s(X+Y),A+B,Z) :- add2(s(0),X+Y,W), add2(A,B,C),add2(W,C,Z).
 add2(X,s(A+B),Z) :- add2(s(0),A+B,C),add2(X,C,Z).
@@ -36,13 +33,17 @@ add2(X,p(A+B),Z) :- add2(p(0),A+B,C),add2(X,C,Z).
 add2(p(X+Y),A,Z) :- add2(p(0),X+Y,W),add2(W,A,Z).
 add2(p(X+Y),s(A+B),Z) :- add2(p(0),X+Y,W),add2(p(0),A+B,C),add2(W,C,Z).
 
-
-
 add2(X+Y,R,Z) :- add2(X,Y,A), add2(A,R,Z).
 add2(X,Y+R,Z) :- add2(Y,R,A), add2(X,A,Z).
 add2(X+Y,A+B,Z) :- add2(X,Y,W), add2(A,B,C) ,add2(W,C,Z).
 add2(X,Y,Z) :- add(X,Y,Z).
 
+
+expand(0,0).
+expand(s(X),p(Y)) :- expand(X,Y).
+expand(p(X),s(Y)) :- expand(X,Y).
+expand(s(X),Y):- expand(X,s(Y)).
+expand(p(X),Y) :- expand(X,p(Y)).
 
 /* 
     purly for fun.=.=
