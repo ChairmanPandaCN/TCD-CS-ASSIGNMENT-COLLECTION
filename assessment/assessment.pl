@@ -46,6 +46,6 @@ add2(X,Y,Z) :- add(X,Y,Z).
 
 Exercise 1
   test case 
-    1.add2(s(0+s(0+s(0))))+s(0)+s(0),add2(s(0+s(0+s(0))))+s(0)+s(0),Z).
+    1.add2(s(0+s(0+s(0))))+s(0)+s(0),s(0+s(0+s(0)))),Z).
     2.add2(s(0)+s(0)+s(0)+s(0)+s(0),0,Z).
 */
