@@ -36,8 +36,14 @@ expand(s(X),Y,Z) :- add2(s(0),Y,W),expand(X,W,Z).
 expand(p(X),Y,Z) :- add2(p(0),Y,W),expand(X,W,Z).
 expand(X+Y,W,Z) :- expand(X,W,R),expand(Y,R,Z). 
 
-minus(0,0).
-minus(X,Y):-expand(X,0,Y).
+
+minus(X,Y):-expand(X,0,A),minus(A,0,Y).
+minus(0,X,X).
+minus(s(X),Y,Z):-add2(p(0),Y,W),minus(X,W,Z).
+minus(p(X),Y,Z):-add2(s(0),Y,W),minus(X,W,Z).
+
+
+
 /* 
     purly for fun.=.=
 Exercise 1
