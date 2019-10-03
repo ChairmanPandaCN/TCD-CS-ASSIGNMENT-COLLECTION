@@ -12,47 +12,34 @@ add(p(X),Y,p(Z)) :- add(X,Y,Z).
 add2(0,X+Y,Z) :- add2(X,Y,Z).
 add2(X+Y,0,Z) :- add2(X,Y,Z).
 
-
-add2(p(X),s(X),0).
-add2(s(X),p(X),0).
-add2(s(p(X)),Y,Z):- add2(X,Y,Z).
-add2(p(s(X)),Y,Z):- add2(X,Y,Z).
-add2(X,s(p(Y)),Z):- add2(X,Y,Z).
-add2(X,p(s(Y)),Z):- add2(X,Y,Z).
-add2(p(X),s(Y),Z):- add2(X,Y,Z).
-add2(s(X),p(Y),Z):- add2(X,Y,Z).
-
 add2(X+Y,s(A+B),Z) :- add2(X,Y,W), add2(s(0),A+B,C),add2(W,C,Z).
 add2(s(X+Y),A+B,Z) :- add2(s(0),X+Y,W), add2(A,B,C),add2(W,C,Z).
 add2(X,s(A+B),Z) :- add2(s(0),A+B,C),add2(X,C,Z).
 add2(s(X+Y),A,Z) :- add2(s(0),X+Y,W),add2(W,A,Z).
 add2(s(X+Y),s(A+B),Z) :- add2(s(0),X+Y,W),add2(s(0),A+B,C),add2(W,C,Z).
 
+
 add2(X+Y,p(A+B),Z) :- add2(X,Y,W), add2(p(0),A+B,C),add2(W,C,Z).
 add2(p(X+Y),A+B,Z) :- add2(p(0),X+Y,W), add2(A,B,C),add2(W,C,Z).
 add2(X,p(A+B),Z) :- add2(p(0),A+B,C),add2(X,C,Z).
 add2(p(X+Y),A,Z) :- add2(p(0),X+Y,W),add2(W,A,Z).
-add2(p(X+Y),s(A+B),Z) :- add2(p(0),X+Y,W),add2(p(0),A+B,C),add2(W,C,Z).
+add2(p(X+Y),p(A+B),Z) :- add2(p(0),X+Y,W),add2(p(0),A+B,C),add2(W,C,Z).
 
-add2(X+Y,R,Z) :- add2(X,Y,A), add2(A,R,Z).
-add2(X,Y+R,Z) :- add2(Y,R,A), add2(X,A,Z).
-add2(X+Y,A+B,Z) :- add2(X,Y,W), add2(A,B,C) ,add2(W,C,Z).
+add2(X+Y,R,Z) :- expand(X,0,A),expand(Y,0,B),expand(R,0,C),add2(A,B,D),add2(D,C,Z).
+
+add2(X,Y+R,Z) :- expand(X,0,A),expand(Y,0,B),expand(R,0,C),add2(A,B,D),add2(D,C,Z).
+
+add2(X+Y,A+B,Z) :- expand(X,0,D),expand(Y,0,E),expand(A,0,F),expand(B,0,G),add2(D,E,H),add2(F,G,I),add2(H,I,Z).
 add2(X,Y,Z) :- add(X,Y,Z).
 
-expand(0,0).
-expand(s(X),0):-expand(X,s(0)).
-expand(p(X),0):-expand(X,p(0)).
-expand(s(X),p(Y)):-expand(X,Y).
-expand(p(X),s(Y)):-expand(X,Y).
 
-convert(0,0).
-convert(s(X),p(Y)):-convert(X,Y).
-/*
-expand(s(X),Y) :- expand(X,s(Y)).
-expand(p(X),Y) :- expand(X,p(Y)).
-expand(s(X),p(Y)) :- expand(X,Y). 
-expand(p(X),s(Y)) :- expand(X,Y).
-*/
+expand(0,X,X).
+expand(s(X),p(Y),Z) :- expand(X,Y,Z).
+expand(p(X),s(Y),Z) :- expand(X,Y,Z).
+expand(s(X),Y,Z) :- add2(s(0),Y,W),expand(X,W,Z).
+expand(p(X),Y,Z) :- add2(p(0),Y,W),expand(X,W,Z).
+expand(X+Y,W,Z) :- expand(X,W,R),expand(Y,R,Z). 
+
 
 /* 
     purly for fun.=.=
@@ -60,4 +47,7 @@ Exercise 1
   test case 
     1.add2(s(0+s(0+s(0)))+s(0)+s(0),s(0+s(0+s(0))),Z).
     2.add2(s(0)+s(0)+s(0)+s(0)+s(0),0,Z).
+Exercise 2
+  test case 
+    1.add2(s(0+p(0+s(0)))+s(0)+s(0),s(0+p(0+s(0))),Z).
 */
