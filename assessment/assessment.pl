@@ -45,7 +45,8 @@ expand(X+Y,W,Z) :- expand(X,W,R),expand(Y,R,Z).
 
 
 /*
-main purpse of this block is to find opposite expression for the given parameter such as p(p(p(p(0)))) is the opposite of s(0+p(0+s(0)))+s(0)+s(0)+s(0+p(0+s(0)))
+main purpse of this block is to find opposite expression for the given parameter 
+such as p(p(p(p(0)))) is the opposite of s(0+p(0+s(0)))+s(0)+s(0)+s(0+p(0+s(0)))
 */
 minus(X,Y):-expand(X,0,A),minus(A,0,Y).
 minus(0,X,X).
@@ -62,5 +63,8 @@ Exercise 2
   test case 
     1.expand(s(0+p(0+s(0)))+s(0)+s(0)+s(0+p(0+s(0))),0,Z).
     2.add2(s(0+p(0+s(0)))+s(0)+s(0),s(0+p(0+s(0))),Z).
+Exercise 3
+  test case 
+    1.minus(s(0+p(0+s(0)))+s(0)+s(0)+s(0+p(0+s(0))))
 */
 
