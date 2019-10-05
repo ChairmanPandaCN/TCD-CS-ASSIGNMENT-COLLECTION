@@ -111,7 +111,7 @@ minus(p(X),Y,Z):-add2(s(0),Y,W),minus(X,W,Z).
     purly for fun.=.=
 Exercise 1
   test case   
-    1.add2(s(0+s(0+s(0)))+s(0)+s(0),s(0+s(0+s(0),Z).          Answer  : s(s(s(s(s(s(s(s(0))))))))               ☑
+    1.add2(s(0+s(0+s(0)))+s(0)+s(0),s(0+s(0+s(0))),Z).        Answer  : s(s(s(s(s(s(s(s(0))))))))               ☑
     2.add2(s(0)+s(0)+s(0)+s(0)+s(0),0,Z).                     Answer  : s(s(s(s(s(0)))))                        ☑
 Exercise 2
   test case 
