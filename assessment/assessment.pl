@@ -142,3 +142,4 @@ Exercise 6
     3. add2(s(s(0))-p(0)-p(0),p(s(0)),Z).
 */
 
+git 
