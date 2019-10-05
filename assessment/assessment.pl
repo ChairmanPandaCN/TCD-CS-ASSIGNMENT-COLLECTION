@@ -34,6 +34,46 @@ add2(X+Y,R,Z) :- expand(X,0,A),expand(Y,0,B),expand(R,0,C),add2(A,B,D),add2(D,C,
 add2(X,Y+R,Z) :- expand(X,0,A),expand(Y,0,B),expand(R,0,C),add2(A,B,D),add2(D,C,Z).
 add2(X+Y,A+B,Z) :- expand(X,0,D),expand(Y,0,E),expand(A,0,F),expand(B,0,G),add2(D,E,H),add2(F,G,I),add2(H,I,Z).
 
+add2(0,X-Y,Z) :- expand(X,0,A),minus(Y,0,B),add2(A,B,Z).
+add2(X-Y,0,Z) :- expand(X,0,A),minus(Y,0,B),add2(A,B,Z).
+
+add2(X-Y,s(A+B),Z) :- expand(X,0,C),minus(Y,0,D),expand(A,0,E),expand(B,0,F),add2(C,D,G),add2(s(0),E+F,H),add2(G,H,Z).
+add2(X+Y,s(A-B),Z) :- expand(X,0,C),expand(Y,0,D),expand(A,0,E),minus(B,0,F),add2(C,D,G),add2(s(0),E+F,H),add2(G,H,Z).
+add2(X-Y,s(A-B),Z) :- expand(X,0,C),minus(Y,0,D),expand(A,0,E),minus(B,0,F),add2(C,D,G),add2(E,F,H),add2(s(0),H,I),add2(G,I,Z).
+
+
+add2(s(X-Y),A+B,Z) :-  expand(X,0,C),minus(Y,0,D),expand(A,0,E),expand(B,0,F),add2(E,F,G),add2(s(0),C+D,H),add2(G,H,Z).
+add2(s(X+Y),A-B,Z) :-  expand(X,0,C),expand(Y,0,D),expand(A,0,E),minus(B,0,F),add2(E,F,G),add2(s(0),C+D,H),add2(G,H,Z).
+add2(s(X-Y),A-B,Z) :-  expand(X,0,C),minus(Y,0,D),expand(A,0,E),minus(B,0,F),add2(E,F,G),add2(s(0),C+D,H),add2(G,H,Z).
+
+add2(X,s(A-B),Z) :- expand(X,0,C),expand(A,0,D),minus(B,0,E),add2(s(0),D+E,F),add2(C,F,Z).
+add2(s(X-Y),A,Z) :- expand(X,0,C),minus(Y,0,D),expand(A,0,E),add2(s(0),C+D,F),add2(F,E,Z).
+
+add2(s(X-Y),s(A+B),Z) :- expand(X,0,C),minus(Y,0,D),expand(A,0,E),expand(B,0,F),add2(s(0),E+F,G),add2(s(0),C+D,H),add2(G,H,Z).
+add2(s(X+Y),s(A-B),Z) :- expand(X,0,C),expand(Y,0,D),expand(A,0,E),minus(B,0,F),add2(s(0),E+F,G),add2(s(0),C+D,H),add2(G,H,Z).
+add2(s(X-Y),s(A-B),Z) :- expand(X,0,C),minus(Y,0,D),expand(A,0,E),minus(B,0,F),add2(s(0),E+F,G),add2(s(0),C+D,H),add2(G,H,Z).
+add2(X-Y,p(A+B),Z) :- expand(X,0,C),minus(Y,0,D),expand(A,0,E),expand(B,0,F),add2(C,D,G),add2(p(0),E+F,H),add2(G,H,Z).
+add2(X+Y,p(A-B),Z) :- expand(X,0,C),expand(Y,0,D),expand(A,0,E),minus(B,0,F),add2(C,D,G),add2(p(0),E+F,H),add2(G,H,Z).
+add2(X-Y,p(A-B),Z) :- expand(X,0,C),minus(Y,0,D),expand(A,0,E),minus(B,0,F),add2(C,D,G),add2(E,F,H),add2(p(0),H,I),add2(G,I,Z).
+
+
+add2(p(X-Y),A+B,Z) :-  expand(X,0,C),minus(Y,0,D),expand(A,0,E),expand(B,0,F),add2(E,F,G),add2(p(0),C+D,H),add2(G,H,Z).
+add2(p(X+Y),A-B,Z) :-  expand(X,0,C),expand(Y,0,D),expand(A,0,E),minus(B,0,F),add2(E,F,G),add2(p(0),C+D,H),add2(G,H,Z).
+add2(p(X-Y),A-B,Z) :-  expand(X,0,C),minus(Y,0,D),expand(A,0,E),minus(B,0,F),add2(E,F,G),add2(p(0),C+D,H),add2(G,H,Z).
+
+add2(X,p(A-B),Z) :- expand(X,0,C),expand(A,0,D),minus(B,0,E),add2(p(0),D+E,F),add2(C,F,Z).
+add2(p(X-Y),A,Z) :- expand(X,0,C),minus(Y,0,D),expand(A,0,E),add2(p(0),C+D,F),add2(F,E,Z).
+
+add2(p(X-Y),p(A+B),Z) :- expand(X,0,C),minus(Y,0,D),expand(A,0,E),expand(B,0,F),add2(p(0),E+F,G),add2(p(0),C+D,H),add2(G,H,Z).
+add2(p(X+Y),p(A-B),Z) :- expand(X,0,C),expand(Y,0,D),expand(A,0,E),minus(B,0,F),add2(p(0),E+F,G),add2(p(0),C+D,H),add2(G,H,Z).
+add2(p(X-Y),p(A-B),Z) :- expand(X,0,C),minus(Y,0,D),expand(A,0,E),minus(B,0,F),add2(p(0),E+F,G),add2(p(0),C+D,H),add2(G,H,Z).
+
+add2(X-Y,R,Z) :- expand(X,0,A),minus(Y,0,B),expand(R,0,C),add2(A,B,D),add2(D,C,Z).
+add2(X,Y-R,Z) :- expand(X,0,A),expand(Y,0,B),minus(R,0,C),add2(A,B,D),add2(D,C,Z).
+add2(X-Y,A+B,Z) :- expand(X,0,D),minus(Y,0,E),expand(A,0,F),expand(B,0,G),add2(D,E,H),add2(F,G,I),add2(H,I,Z).
+add2(X+Y,A-B,Z) :- expand(X,0,D),expand(Y,0,E),expand(A,0,F),minus(B,0,G),add2(D,E,H),add2(F,G,I),add2(H,I,Z).
+add2(X+Y,A-B,Z) :- expand(X,0,D),minus(Y,0,E),expand(A,0,F),minus(B,0,G),add2(D,E,H),add2(F,G,I),add2(H,I,Z).
+
 add2(X,Y,Z) :- add(X,Y,Z).
 
 /*
@@ -61,7 +101,7 @@ minus(p(X),Y,Z):-add2(s(0),Y,W),minus(X,W,Z).
     purly for fun.=.=
 Exercise 1
   test case 
-    1.add2(s(0+s(0+s(0)))+s(0)+s(0),s(0+s(0+s(0))),Z).
+    1.add2(s(0+s(0+s(0)))+s(0)+s(0),s(0+s(0+s(0)subtract(-s(0+s(0+s(0)))+s(0)+s(0),-s(0+s(0+s(0))),Z).)),Z).
     2.add2(s(0)+s(0)+s(0)+s(0)+s(0),0,Z).
 Exercise 2
   test case 
@@ -78,6 +118,9 @@ Exercise 5
   test code
     1. subtract(-s(0+s(0+s(0)))+s(0)+s(0),s(0+s(0+s(0))),Z).
     2. subtract(-s(0+s(0+s(0)))+s(0)+s(0),-s(0+s(0+s(0))),Z).
+Exercise 6
+  test code
+    1. subtract(-s(0+s(0+s(0)))+s(0)+s(0),s(0-s(0-s(0))),Z).
+    2. add2(s(s(0))+p(0)-p(0),p(s(0)),Z).
 */
 
-subtract(-s(0+s(0+s(0)))+s(0)+s(0),-s(0+s(0+s(0))),Z).
