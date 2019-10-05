@@ -96,7 +96,7 @@ expand(s(X),Y,Z) :- add2(s(0),Y,W),expand(X,W,Z).
 expand(p(X),Y,Z) :- add2(p(0),Y,W),expand(X,W,Z).
 expand(-X,W,Z) :- minus(X,Y),expand(Y,W,Z).
 expand(X+Y,W,Z) :- expand(X,W,R),expand(Y,R,Z). 
-expand(X-Y,W,Z) :- minus(X,W,R),minus(Y,A),expand(A,R,Z).  
+expand(X-Y,W,Z) :- expand(X,W,R),minus(Y,A),expand(A,R,Z).  
 expand(X,W,Z):-expand(X,W,Z). 
 /* 
 main purpse of this block is to find opposite expression for the given parameter  
@@ -106,6 +106,7 @@ minus(X,Y):-expand(X,0,A),minus(A,0,Y).
 minus(0,X,X). 
 minus(s(X),Y,Z):-add2(p(0),Y,W),minus(X,W,Z).
 minus(p(X),Y,Z):-add2(s(0),Y,W),minus(X,W,Z).
+
 
 
 
@@ -134,8 +135,8 @@ Exercise 5
 Exercise 6
   test code
     1. subtract(-s(0+s(0+s(0)))+s(0)+s(0),s(0-s(0-s(0))),Z).  Answer  : p(p(0))                                 ☑               
-    2. subtract(-s(0+s(0+s(0)))+s(0)+s(0),-s(0-s(0-s(0))),Z). Answer  : 0                                       ☑               
+    2. subtract(-s(0+s(0+s(0)))-s(0)-s(0),-s(0-s(0-s(0))),Z). Answer  : 0                                       ☑               
     3. add2(s(s(0))+p(0)-p(0),p(s(0)),Z).                     Answer  : s(s(0))                                 ☑               
-    4. add2((s(s(0))-p(0))-p(0),p(s(0)),Z).                   Answer  : 0                                       ☑
-    5. add2(s(s(0))-p(0)-p(0),p(s(0)),Z).                     Answer  : 0                                       ☑
+    4. add2((s(s(0))-p(0))-p(0),p(s(0)),Z).                   Answer  : s(s(s(s(0))))                           ☑
+    5. add2(s(s(0))-p(0)-p(0),p(s(0)),Z).                     Answer  : s(s(s(s(0))))                           ☑
 */
