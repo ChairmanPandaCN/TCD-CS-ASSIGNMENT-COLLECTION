@@ -26,8 +26,6 @@ add2((-X),Y,Z) :- minus(X,A),add2(A,Y,Z).
 add2(X,(-Y),Z) :- minus(Y,A),add2(X,A,Z).
 
 
-
-
 add2(0,X+Y,Z) :- expand(X,0,A),expand(Y,0,B),add2(A,B,Z).
 add2(X+Y,0,Z) :- expand(X,0,A),expand(Y,0,B),add2(A,B,Z).
 add2(X+Y,s(A+B),Z) :- expand(X,0,C),expand(Y,0,D),expand(A,0,E),expand(B,0,F),add2(C,D,G),add2(s(0),E+F,H),add2(G,H,Z).
@@ -51,7 +49,6 @@ add2(X-Y,0,Z) :- expand(X,0,A),minus(Y,0,B),add2(A,B,Z).
 add2(X-Y,s(A+B),Z) :- expand(X,0,C),minus(Y,0,D),expand(A,0,E),expand(B,0,F),add2(C,D,G),add2(s(0),E+F,H),add2(G,H,Z).
 add2(X+Y,s(A-B),Z) :- expand(X,0,C),expand(Y,0,D),expand(A,0,E),minus(B,0,F),add2(C,D,G),add2(s(0),E+F,H),add2(G,H,Z).
 add2(X-Y,s(A-B),Z) :- expand(X,0,C),minus(Y,0,D),expand(A,0,E),minus(B,0,F),add2(C,D,G),add2(E,F,H),add2(s(0),H,I),add2(G,I,Z).
-
 
 add2(s(X-Y),A+B,Z) :-  expand(X,0,C),minus(Y,0,D),expand(A,0,E),expand(B,0,F),add2(E,F,G),add2(s(0),C+D,H),add2(G,H,Z).
 add2(s(X+Y),A-B,Z) :-  expand(X,0,C),expand(Y,0,D),expand(A,0,E),minus(B,0,F),add2(E,F,G),add2(s(0),C+D,H),add2(G,H,Z).
@@ -113,32 +110,30 @@ minus(p(X),Y,Z):-add2(s(0),Y,W),minus(X,W,Z).
 
 
 
-
 /* 
     purly for fun.=.=
 Exercise 1
+  test case   
+    1.add2(s(0+s(0+s(0)))+s(0)+s(0),s(0+s(0+s(0),Z).          Answer  : s(s(s(s(s(s(s(s(0))))))))               ☑
+    2.add2(s(0)+s(0)+s(0)+s(0)+s(0),0,Z).                     Answer  : add2(s(0)+s(0)+s(0)+s(0)+s(0),0,Z).     ☑
+Exercise 2
   test case 
-    1.add2(s(0+s(0+s(0)))+s(0)+s(0),s(0+s(0+s(0),Z).
-    2.add2(s(0)+s(0)+s(0)+s(0)+s(0),0,Z).add2(s(s(0))+p(0)-p(0),p(s(0)),Z).
-Exercise 2add2(s(s(0))+p(0)-p(0),p(s(0)),Z).
-  test case add2(s(s(0))+p(0)-p(0),p(s(0)),Z).
-    1.expand(s(0+p(0+s(0)))+s(0)+s(0)+s(0+p(0+s(0))),0,Z).add2(s(s(0))+p(0)-p(0),p(s(0)),Z).
-    2.add2(s(0+p(0+s(0)))+s(0)+s(0),s(0+p(0+s(0))),Z).add2(s(s(0))+p(0)-p(0),p(s(0)),Z).
-Exercise 3add2(s(s(0))+p(0)-p(0),p(s(0)),Z).
+    1.expand(s(0+p(0+s(0)))+s(0)+s(0)+s(0+p(0+s(0))),0,Z).    Answer  : s(s(s(s(0))))                           ☑
+    2.add2(s(0+p(0+s(0)))+s(0)+s(0),s(0+p(0+s(0))),Z).        Answer  : s(s(s(s(0))))                           ☑
+Exercise 3
   test case 
-    1.minus(s(0+p(0+s(0)))+s(0)+s(0)+s(0+p(0+s(0))),Z).
-Exercise 4add2(s(0+s(0+s(0)))+s(0)+s(0),s(0+s(0+s(0),Z).
-  test case
-    1.add2(-s(0+s(0+s(0)))+s(0)+s(0),s(0+s(0+s(0))),Z).
-    2.add2(-s(0+p(0+s(0)))+s(0)+s(0),-s(0+p(0+s(0))),Z) 
+    1.minus(s(0+p(0+s(0)))+s(0)+s(0)+s(0+p(0+s(0))),Z).       Answer  : p(p(p(p(0))))                           ☑
+Exercise 4
+  test caseadd2((s(s(0))-p(0))-p(0),p(s(0)),Z).
+    1.add2(-s(0+s(0+s(0)))+s(0)+s(0),s(0+s(0+s(0))),Z).       Answer  : s(s(0))                                 ☑
+    2.add2(-s(0+p(0+s(0)))+s(0)+s(0),-s(0+p(0+s(0))),Z).      Answer  : 0                                       ☑
 Exercise 5 
   test code 
-    1. subtract(-s(0+s(0+s(0)))+s(0)+s(0),s(0+s(0+s(0))),Z).
-    2. subtract(-s(0+s(0+s(0)))+s(0)+s(0),-s(0+s(0+s(0))),Z).
+    1. subtract(-s(0+s(0+s(0)))+s(0)+s(0),s(0+s(0+s(0))),Z).  Answer  : p(p(p(p(0))))                           ☑
+    2. subtract(-s(0+s(0+s(0)))+s(0)+s(0),-s(0+s(0+s(0))),Z). Answer  : s(s(0))                                 ☑
 Exercise 6
   test code
     1. subtract(-s(0+s(0+s(0)))+s(0)+s(0),s(0-s(0-s(0))),Z).
     2. add2(s(s(0))+p(0)-p(0),p(s(0)),Z).
-    3. add2(s(s(0))-p(0)-p(0),p(s(0)),Z).
+    3. add2((s(s(0))-p(0))-p(0),p(s(0)),Z).
 */
-
