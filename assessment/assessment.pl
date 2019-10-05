@@ -22,8 +22,8 @@ add(s(X),Y,s(Z)) :- add(X,Y,Z).
 add(p(X),Y,p(Z)) :- add(X,Y,Z). 
  
 
-add2((-X),Y,Z) :- minus(X,A),add2(A,Y,Z).
-add2(X,(-Y),Z) :- minus(Y,A),add2(X,A,Z).
+add2(-X,Y,Z) :- minus(X,A),add2(A,Y,Z).                                   
+add2(X,-Y,Z) :- minus(Y,A),add2(X,A,Z).
 
 
 add2(0,X+Y,Z) :- expand(X,0,A),expand(Y,0,B),add2(A,B,Z).
@@ -96,7 +96,7 @@ expand(s(X),Y,Z) :- add2(s(0),Y,W),expand(X,W,Z).
 expand(p(X),Y,Z) :- add2(p(0),Y,W),expand(X,W,Z).
 expand(-X,W,Z) :- minus(X,Y),expand(Y,W,Z).
 expand(X+Y,W,Z) :- expand(X,W,R),expand(Y,R,Z). 
-expand(X-Y,W,Z) :- expand(X,W,R),expand(Y,R,Z).  
+expand(X-Y,W,Z) :- minus(X,W,R),minus(Y,A),expand(A,R,Z).  
 expand(X,W,Z):-expand(X,W,Z). 
 /* 
 main purpse of this block is to find opposite expression for the given parameter  
@@ -115,7 +115,7 @@ minus(p(X),Y,Z):-add2(s(0),Y,W),minus(X,W,Z).
 Exercise 1
   test case   
     1.add2(s(0+s(0+s(0)))+s(0)+s(0),s(0+s(0+s(0),Z).          Answer  : s(s(s(s(s(s(s(s(0))))))))               ☑
-    2.add2(s(0)+s(0)+s(0)+s(0)+s(0),0,Z).                     Answer  : add2(s(0)+s(0)+s(0)+s(0)+s(0),0,Z).     ☑
+    2.add2(s(0)+s(0)+s(0)+s(0)+s(0),0,Z).                     Answer  : s(s(s(s(s(0)))))                        ☑
 Exercise 2
   test case 
     1.expand(s(0+p(0+s(0)))+s(0)+s(0)+s(0+p(0+s(0))),0,Z).    Answer  : s(s(s(s(0))))                           ☑
@@ -124,7 +124,7 @@ Exercise 3
   test case 
     1.minus(s(0+p(0+s(0)))+s(0)+s(0)+s(0+p(0+s(0))),Z).       Answer  : p(p(p(p(0))))                           ☑
 Exercise 4
-  test caseadd2((s(s(0))-p(0))-p(0),p(s(0)),Z).
+  test case
     1.add2(-s(0+s(0+s(0)))+s(0)+s(0),s(0+s(0+s(0))),Z).       Answer  : s(s(0))                                 ☑
     2.add2(-s(0+p(0+s(0)))+s(0)+s(0),-s(0+p(0+s(0))),Z).      Answer  : 0                                       ☑
 Exercise 5 
@@ -133,7 +133,9 @@ Exercise 5
     2. subtract(-s(0+s(0+s(0)))+s(0)+s(0),-s(0+s(0+s(0))),Z). Answer  : s(s(0))                                 ☑
 Exercise 6
   test code
-    1. subtract(-s(0+s(0+s(0)))+s(0)+s(0),s(0-s(0-s(0))),Z).
-    2. add2(s(s(0))+p(0)-p(0),p(s(0)),Z).
-    3. add2((s(s(0))-p(0))-p(0),p(s(0)),Z).
+    1. subtract(-s(0+s(0+s(0)))+s(0)+s(0),s(0-s(0-s(0))),Z).  Answer  : p(p(0))                                 ☑               
+    2. subtract(-s(0+s(0+s(0)))+s(0)+s(0),-s(0-s(0-s(0))),Z). Answer  : 0                                       ☑               
+    3. add2(s(s(0))+p(0)-p(0),p(s(0)),Z).                     Answer  : s(s(0))                                 ☑               
+    4. add2((s(s(0))-p(0))-p(0),p(s(0)),Z).                   Answer  : 0                                       ☑
+    5. add2(s(s(0))-p(0)-p(0),p(s(0)),Z).                     Answer  : 0                                       ☑
 */
