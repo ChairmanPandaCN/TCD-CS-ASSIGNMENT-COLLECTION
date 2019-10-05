@@ -131,9 +131,9 @@ Exercise 5
 Exercise 6
   test code
     1. subtract(-s(0+s(0+s(0)))+s(0)+s(0),s(0-s(0-s(0))),Z).  Answer  : p(p(0))                                 ☑               
-    2. subtract(-s(0+s(0+s(0)))+s(0)+s(0),-s(0-s(0-s(0))),Z). Answer  : 0                                       ☑               
+    2. subtract(-s(0+s(0+s(0)))-s(0)-s(0),-s(0-s(0-s(0))),Z). Answer  : 0                                       ☑               
     3. add2(s(s(0))+p(0)-p(0),p(s(0)),Z).                     Answer  : s(s(0))                                 ☑               
-    4. add2((s(s(0))-p(0))-p(0),p(s(0)),Z).                   Answer  : 0                                       ☑
-    5. add2(s(s(0))-p(0)-p(0),p(s(0)),Z).                     Answer  : 0                                       ☑
+    4. add2((s(s(0))-p(0))-p(0),p(s(0)),Z).                   Answer  : s(s(s(s(0))))                           ☑
+    5. add2(s(s(0))-p(0)-p(0),p(s(0)),Z).                     Answer  : s(s(s(s(0))))                           ☑
 */
 
