@@ -54,22 +54,32 @@ int main()
 	struct node* root = newNode(20);
 	root->left = newNode(8);
 	root->right = newNode(22);
+	root->right->right = newNode(21);
 	root->left->left = newNode(4);
 	root->left->right = newNode(12);
+	root->left->left = newNode(3);
+	root->left->left->left = newNode(2);
 	root->left->right->left = newNode(10);
 	root->left->right->right = newNode(14);
 
 	int n1 = 10, n2 = 14;
 	struct node* t = lca(root, n1, n2);
-	check("LCA of 10 and 14", lca(root, n1, n2)->data, 12);
+	check("LCA of 10 and 14", t->data, 12);
 	n1 = 14, n2 = 8;
 	t = lca(root, n1, n2);
-	check("LCA of 14 and 8", lca(root, n1, n2)->data, 8);
+	check("LCA of 14 and 8", t->data, 8);
 
 	n1 = 10, n2 = 22;
 	t = lca(root, n1, n2);
-	check("LCA of 10 and 22", lca(root, n1, n2)->data, 20);
+	check("LCA of 10 and 22", t->data, 20);
 
+	n1 = 4, n2 = 3;
+	t = lca(root, n1, n2);
+	check("LCA of 2 and 3", t->data, 3);
+
+	n1 = 2, n2 = 21;
+	t = lca(root, n1, n2);
+	check("LCA of 2 and 21", t->data, 20);
 	getchar();
 	return 0;
 }
