@@ -13,17 +13,18 @@ numeral(s(p(X))) :- numeral(X).
 
 
 
-
+add(0,X,X).
 add(s(X),p(Y),Z) :- add(X,Y,Z). 
 add(p(X),s(Y),Z) :- add(X,Y,Z). 
 add(s(X),Y,s(Z)) :- add(X,Y,Z). 
 add(p(X),Y,p(Z)) :- add(X,Y,Z). 
-add(p(s(0)),Y,Z) :- add(0,Y,Z).
-add(s(p(0)),Y,Z) :- add(0,Y,Z).
-add(X,p(s(0)),Z) :- add(X,0,Z).
-add(X,s(p(0)),Z) :- add(X,0,Z).
-add(0,X,X).
 
+
+
+add2(p(s(X)),Y,Z) :- expand(X,0,A),expand(Y,0,B),add2(A,B,Z).
+add2(s(p(X)),Y,Z) :- expand(X,0,A),expand(Y,0,B),add2(A,B,Z).
+add2(X,p(s(Y)),Z) :- expand(X,0,A),expand(Y,0,B),add2(A,B,Z).
+add2(X,s(p(Y)),Z) :- expand(X,0,A),expand(Y,0,B),add2(A,B,Z).
 
 add2(-X,Y,Z) :- minus(X,A),expand(Y,0,R),add2(A,R,P),expand(P,0,Z).                                   
 add2(X,-Y,Z) :- minus(Y,A),expand(X,0,R),add2(R,A,P),expand(P,0,Z).
