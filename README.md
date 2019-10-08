@@ -25,3 +25,10 @@
 
 2. Write check() to test the code.
    
+## 2019-10-2
+1. Open a new Branch for DAG
+
+## 2019-10-8
+1. Rewrite part One in java,simply because the Junit ui is too friendly to use.
+
+1. Start working on DAG
