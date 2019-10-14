@@ -32,3 +32,10 @@
 1. Rewrite part One in java,simply because the Junit ui is too friendly to use.
 
 1. Start working on DAG
+
+## 2019-10-14
+1. upload RMS-Biography
+
+1. add search() determine a specific node exists or not
+
+1.

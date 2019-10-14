@@ -1,11 +1,15 @@
+import java.util.ArrayList;
 public class Node {
 	public int data; 
-    public Node left, right; 
-  
+    public ArrayList<Node> descdant;
+    public int depth;
+    public boolean visit;
     public Node(int data) 
     { 
         this.data = data; 
-        this.left = null;
-        this.right =null;
+        this.descdant = new ArrayList<Node>();
+        this.depth =0;
+        this.visit =false;
     } 
+    
 }
