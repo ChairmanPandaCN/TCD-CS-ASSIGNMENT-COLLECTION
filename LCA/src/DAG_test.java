@@ -39,5 +39,24 @@ class DAG_test {
 		assertEquals(aTree.root.children.get(1).children.get(1).data,"E");
 		aTree.root.children.get(1).children.add(f);
 	}
-
+	/*
+	@Test
+	public void test_printfEachNodeDepth() {
+		tree aTree=new tree("A");
+		Node b = new Node("B");
+		Node c = new Node("C");
+		Node d = new Node("D");
+		Node e = new Node("E");
+		Node f = new Node("F");
+		aTree.root.children.add(b);
+		aTree.root.children.add(c);
+		aTree.root.children.get(0).children.add(d);
+		aTree.root.children.get(0).children.add(e);
+		aTree.root.children.get(1).children.add(d);
+		aTree.root.children.get(1).children.add(e);
+		aTree.root.children.get(1).children.add(f);
+		assertEquals(aTree.dfs(aTree.root),"D");
+		
+	}
+	*/
 }
