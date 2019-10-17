@@ -65,3 +65,9 @@
 1. Spot and fix a major problem when writing tests.The previous approach forbids the possibility of that the value of second node been passed in to lca() is alphabetically greater than the first one.
 
 1. Finish the test code,ready to upload.
+
+## 2019-10-18
+
+1. Find a Algorithmic flaw ,when merging DAG into Binary Tree version,unable to fix it,but add something to print correct result
+
+1. 
