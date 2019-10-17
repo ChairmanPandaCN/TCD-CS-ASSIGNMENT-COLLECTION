@@ -2,7 +2,7 @@ import java.util.*;
 
 /*
  * 
- *  The LCA is defined to follow 2 criteria:
+ *  The LCA is defined as following  2 criteria:
  * 		1.A LCA w of nodes u and v in a DAG is an ancestor of both u and v where w has no descendants that are also ancestors of both u and v. 
  *      2.Compare with other ancestors, #(edges of w to u) + #(edges of w to v) is the lowest figure.
  */
@@ -39,8 +39,22 @@ public class tree {
 		}
 	}
 
-	public static void findAncestor(Node root, Node a, Node b) {
+	public static void findAncestor(Node root, Node one, Node two) {
 		dfs(root);
+		/*
+		 * This part is to make sure that the Node one cannot smaller than Node two in Alphabetical order
+		 * Extremely important 
+		 */
+		int tmp = one.data.compareTo(two.data);
+		Node a;
+		Node b;
+		if(tmp==1) {
+			a = two;
+			b = one;
+		}else {
+			a = one;
+			b = two;
+		}
 		ArrayList<Integer> alist = new ArrayList<Integer>();
 		ArrayList<Integer> blist = new ArrayList<Integer>();
 		for (int i = 0; i < branch.size(); i++) {
@@ -57,6 +71,7 @@ public class tree {
 		 * 
 		 *  Something magic happens here.
 		 */
+
 		for (int i = 0; i < alist.size(); i++) {
 			//Iterate every branch contains a.data
 			int distance =branch.get(alist.get(i)).indexOf(a.data);
@@ -80,7 +95,7 @@ public class tree {
 			}
 		}
 	}
-	private String lca(Node a,Node b) {
+	public String lca(Node a,Node b) {
 		findAncestor(this.root, a, b);
 		String LCA ="";
 		ArrayList<String> lcaList=new ArrayList<String>();
@@ -104,11 +119,13 @@ public class tree {
 			i++;
 		}
 		LCA+=lcaList.get(i);
+		lcaTable.clear();
 		return LCA;
 	}
 
+	
+	/*
 	public static void main(String[] args) {
-		///*
 		tree aTree = new tree("A");
 		Node b = new Node("B");
 		Node c = new Node("C");
@@ -122,15 +139,16 @@ public class tree {
 		aTree.root.children.get(1).children.add(d);
 		aTree.root.children.get(1).children.add(e);
 		aTree.root.children.get(1).children.add(f);
-		findAncestor(aTree.root, new Node("D"), new Node("E"));
+		findAncestor(aTree.root, new Node("D"), new Node("A"));
 		System.out.println("The following branches constitute the tree : ");
 		for (int i = 0; i < branch.size(); i++) {
 			System.out.println(branch.get(i).toString());
 		}
 		System.out.println(lcaTable.toString());
-		System.out.println(aTree.lca(new Node("D"), new Node("E")));
-		//*/
-		/*
+		System.out.println(aTree.lca(new Node("D"), new Node("A")));
+		
+		
+	
 		tree aTree = new tree("A");
 		Node b = new Node("B");
 		Node c = new Node("C");
@@ -144,14 +162,9 @@ public class tree {
 		aTree.root.children.get(0).children.get(0).children.add(e);
 		aTree.root.children.get(1).children.add(f);
 		aTree.root.children.get(1).children.add(e);
-		*/
-		//System.out.println(aTree.lca(new Node("E"),new Node("F")));
-		//lca(aTree.root, new Node("B"), new Node("D"));
 		
+		System.out.println(aTree.lca(new Node("E"),new Node("F")));
 		
-		// System.out.println(branch[0]);
-		// System.out.println(aTree.root.children.get(0).children.size());
-		// System.out.println(aTree.root.children.get(1).children.size());
 	}
-
+	*/
 }

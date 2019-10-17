@@ -61,3 +61,7 @@
 ## 2019-10-17
 
 1. Proceed to add test code.
+
+1. Spot and fix a major problem when writing tests.The previous approach forbids the possibility of that the value of second node been passed in to lca() is alphabetically greater than the first one.
+
+1. Finish the test code,ready to upload.
