@@ -122,49 +122,4 @@ public class tree {
 		lcaTable.clear();
 		return LCA;
 	}
-
-	
-	/*
-	public static void main(String[] args) {
-		tree aTree = new tree("A");
-		Node b = new Node("B");
-		Node c = new Node("C");
-		Node d = new Node("D");
-		Node e = new Node("E");
-		Node f = new Node("F");
-		aTree.root.children.add(b);
-		aTree.root.children.add(c);
-		aTree.root.children.get(0).children.add(d);
-		aTree.root.children.get(0).children.add(e);
-		aTree.root.children.get(1).children.add(d);
-		aTree.root.children.get(1).children.add(e);
-		aTree.root.children.get(1).children.add(f);
-		findAncestor(aTree.root, new Node("D"), new Node("A"));
-		System.out.println("The following branches constitute the tree : ");
-		for (int i = 0; i < branch.size(); i++) {
-			System.out.println(branch.get(i).toString());
-		}
-		System.out.println(lcaTable.toString());
-		System.out.println(aTree.lca(new Node("D"), new Node("A")));
-		
-		
-	
-		tree aTree = new tree("A");
-		Node b = new Node("B");
-		Node c = new Node("C");
-		Node d = new Node("D");
-		Node e = new Node("E");
-		Node f = new Node("F");
-		aTree.root.children.add(b);
-		aTree.root.children.add(c);
-		aTree.root.children.get(0).children.add(d);
-		aTree.root.children.get(0).children.add(f);
-		aTree.root.children.get(0).children.get(0).children.add(e);
-		aTree.root.children.get(1).children.add(f);
-		aTree.root.children.get(1).children.add(e);
-		
-		System.out.println(aTree.lca(new Node("E"),new Node("F")));
-		
-	}
-	*/
 }

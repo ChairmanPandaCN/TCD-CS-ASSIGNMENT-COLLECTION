@@ -7,7 +7,7 @@ class DAG_test {
 
 	
 	@Test
-	public void testAddNode() {
+	public void testDAG_AddNode() {
 
 		//A B
 		//A C
@@ -64,7 +64,7 @@ class DAG_test {
  * C F
  */
 	@Test
-	public void test_LCA() {
+	public void testDAG_LCA() {
 		tree aTree = new tree("A");
 		Node b = new Node("B");
 		Node c = new Node("C");
@@ -88,5 +88,24 @@ class DAG_test {
 		assertEquals(aTree.lca(new Node(aTree.lca(new Node("C"), new Node("D"))), new Node("B")),"A");
 		assertEquals(aTree.lca(new Node(aTree.lca(new Node("D"), new Node("C"))), new Node("B")),"A");
 	}
-
+	
+	
+	@Test
+	public void test_simpleLCA() {
+		tree aTree = new tree("A");
+		Node b = new Node("B");
+		Node c = new Node("C");
+		Node d = new Node("D");
+		Node e = new Node("E");
+		Node f = new Node("F");
+		Node g = new Node("G");
+		Node h = new Node("H");
+		aTree.root.children.add(b);
+		aTree.root.children.add(c);
+		aTree.root.children.get(0).children.add(d);
+		aTree.root.children.get(0).children.add(e);
+		aTree.root.children.get(1).children.add(f);
+		aTree.root.children.get(1).children.add(g);
+		assertEquals(aTree.lca(new Node("F"), new Node("E")),"A");
+	}
 }
