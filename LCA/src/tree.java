@@ -1,76 +1,125 @@
+import java.util.*;
 
-public class tree {
-	// Root of the Binary Tree
-	public Node root;
-
-	public tree() {
-		this.root=null;
-	}
-
-	public Node findLCA(int n1, int n2) {
-		if(search(root, n1)==null||search(root, n2)==null) {
-			return null;
-		}
-		return lca(root, n1, n2);
-	}
-	
-	private Node lca(Node root, int n1, int n2) {
-		// Base case
-		if (root == null)
-			return null;
-
-		if(root.data>n1&&root.data>n2)
-			return lca(root.left,n1,n2);
-		if(root.data<n1&&root.data<n2)
-			return lca(root.right,n1,n2);
-		
-		return root;
-		}
-	
-	public void insert(int value) {
-		root=insert(root, value);
-	}
-
-	private Node insert(Node root, int value) {
-		if (root == null) {
-			return new Node(value);
-		}
-		if (value < root.data) {
-			root.left = insert(root.left, value);
-		} else {
-			root.right = insert(root.right, value);
-		}
-		return root;
-	}
-	
-	// A utility function to search a given key in BST 
-	private Node search(Node root, int data) 
-	{ 
-	    
-	    if (root==null || root.data==data) 
-	        return root; 
-	 
-	    if (root.data > data) 
-	        return search(root.left, data); 
-	  
-	    return search(root.right, data); 
-	} 
 /*
-	public static void main(String[] args) {
-		tree aTree=new tree();
-		aTree.insert(30);
-		aTree.insert(20);
-		aTree.insert(10);
-		aTree.insert(5);
-		aTree.insert(60);
-		aTree.insert(65);
-		aTree.insert(50);
-		aTree.insert(55);
-		aTree.insert(45);
-		aTree.insert(35);
-		aTree.insert(48);
-		aTree.insert(49);
-		System.out.println("The root value is "+aTree.root.data);
+ * 
+ *  The LCA is defined as following  2 criteria:
+ * 		1.A LCA w of nodes u and v in a DAG is an ancestor of both u and v where w has no descendants that are also ancestors of both u and v. 
+ *      2.Compare with other ancestors, #(edges of w to u) + #(edges of w to v) is the lowest figure.
+ */
+public class tree {
+	public Node root;
+	public static ArrayList<ArrayList<String>> branch;
+	private static Stack<String> stack;
+	private static HashMap<String, Integer> lcaTable;
+
+	public tree(String value) {
+		branch = new ArrayList<ArrayList<String>>();
+		lcaTable = new HashMap<String, Integer>();
+		stack = new Stack<String>();
+		this.root = new Node(value);
 	}
-*/
+
+	private static void dfs(Node root) {
+		// if not reach the branch end 	
+		if (root.children.size() != 0) {
+			stack.add(root.data);
+			//add an ancestor to family book 
+			for (int i = 0; i < root.children.size(); i++) {
+		    // this family spread out,reach every sub-family,starting recursion
+				dfs(root.children.get(i));
+			// try another family branch	
+				stack.pop();
+			}
+		} else {
+			//Reach the child who doesnt have child/children yet.
+			stack.add(root.data);
+			//Add this family branch to the list
+			ArrayList<String> tmp = new ArrayList<String>(stack);
+			branch.add(tmp);
+		}
+	}
+
+	public static void findAncestor(Node root, Node one, Node two) {
+		dfs(root);
+		/*
+		 * This part is to make sure that the Node one cannot smaller than Node two in Alphabetical order
+		 * Extremely important 
+		 */
+		int tmp = one.data.compareTo(two.data);
+		Node a;
+		Node b;
+		if(tmp==1) {
+			a = two;
+			b = one;
+		}else {
+			a = one;
+			b = two;
+		}
+		ArrayList<Integer> alist = new ArrayList<Integer>();
+		ArrayList<Integer> blist = new ArrayList<Integer>();
+		for (int i = 0; i < branch.size(); i++) {
+			if (branch.get(i).contains(a.data)) {
+				alist.add(i);
+				// System.out.println(a.data + " + " + i + " A");
+			}
+			if (branch.get(i).contains(b.data)) {
+				blist.add(i);
+				// System.out.println(b.data + " + " + i + " B");
+			}
+		}
+		/*
+		 * 
+		 *  Something magic happens here.
+		 */
+
+		for (int i = 0; i < alist.size(); i++) {
+			//Iterate every branch contains a.data
+			int distance =branch.get(alist.get(i)).indexOf(a.data);
+			//Mark the index of a.data in each branch,for future comparison with predecessors of a.data in each branch.
+			for (int j = branch.get(alist.get(i)).indexOf(a.data); j >= 0; j--) {
+			//Iterate every predecessor for a.data in each branch	
+				for (int k = 0; k < blist.size(); k++) {
+				//Iterate every branch contains b.data
+					if (branch.get(blist.get(k)).contains(branch.get(alist.get(i)).get(j))) {
+					//if the branch which contains b.data also contains one of the a.data 's predecessors 
+						if (lcaTable.containsKey(branch.get(alist.get(i)).get(j))
+								&& lcaTable.get(branch.get(alist.get(i)).get(j)) > distance - j) {
+						// find out an common ancestor which is close to child than we expect
+							lcaTable.put(branch.get(alist.get(i)).get(j), distance - j);
+						} else {
+						// find an common ancestor ,add to the table	
+							lcaTable.put(branch.get(alist.get(i)).get(j), distance - j);
+						}
+					}
+				}
+			}
+		}
+	}
+	public String lca(Node a,Node b) {
+		findAncestor(this.root, a, b);
+		String LCA ="";
+		ArrayList<String> lcaList=new ArrayList<String>();
+		int close=Integer.MAX_VALUE ;
+		for (int value : lcaTable.values()) {
+		    if(close>value) {
+		    	close=value;
+		    }
+		}
+		for (HashMap.Entry<String, Integer> entry : lcaTable.entrySet()) {
+		    String key = entry.getKey();
+		    Integer value = entry.getValue();
+		    if(value==close) {
+		    	lcaList.add(key);
+		    }
+		}
+		int i=0;
+		while(i<lcaList.size()-1) {
+			LCA+=lcaList.get(i);
+			LCA+="&";
+			i++;
+		}
+		LCA+=lcaList.get(i);
+		lcaTable.clear();
+		return LCA;
+	}
 }

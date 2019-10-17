@@ -1,11 +1,12 @@
+import java.util.*;
 public class Node {
-	public int data; 
-    public Node left, right; 
-  
-    public Node(int data) 
+	public String data; 
+	
+    public ArrayList<Node> children;
+    public Node(String data) 
     { 
         this.data = data; 
-        this.left = null;
-        this.right =null;
-    } 
+        this.children =  new ArrayList<Node>();
+    }
+    
 }
