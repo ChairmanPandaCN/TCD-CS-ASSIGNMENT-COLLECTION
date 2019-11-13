@@ -16,28 +16,28 @@ def readPageNumber(url, headers):
 
 
 def readContributors(url, headers, maxPageNumber):
-    response = requests.get(url, headers=headers)
-    headers = response.headers
     pageNumber = 1
-    accountClosed = 0
     commitNumber = 0
+    url = url+"&page="
     while pageNumber <= maxPageNumber:
-        url = url+"&page="+str(pageNumber)
+        tmpUrl = url+str(pageNumber)
+        response = requests.get(tmpUrl, headers=headers)
         result = response.json()
-        commits = result.get("items")
-        for commit in commits:
+        for commit in result:
             commitNumber = commitNumber+1
-            contributor = commit["author"]
-            if(contributor != None):
+            getCommitAttributes = commit["commit"]
+            getAuthor = getCommitAttributes["author"]
+            getAuthorName = getAuthor["name"]
+            print(getAuthorName)
+            """
+            if(contributor.__len__() != 0):
                 print(contributor["login"])
             else:
-                print("The person who made this commit closed his account.")
+                print("The person who made this commit stay anonymous")
                 accountClosed = accountClosed+1
+            """
         pageNumber = pageNumber+1
     print("The total number of commits is", commitNumber)
-    print("The number of accounts been closed by its owner is ", accountClosed)
-
-
 # enterCorrectAccountInfo = False
 # print("Pls enter your credentials correctly")
 # username = input("Enter your github username:")
@@ -46,12 +46,14 @@ def readContributors(url, headers, maxPageNumber):
 # repo = user.get_repo("996icu/996.ICU")
 repoOwner = "996icu"
 repoName = "996.ICU"
-
-url = "https://api.github.com/search/commits?q=repo:" + \
-    repoOwner+"/"+repoName + \
-    " author-date:2019-01-01..2019-12-31&per_page=100"
+# up-to-date retrieving commits up to 3019
+# https://api.github.com/repos/996icu/996.ICU/commits?author-date:2019-01-01..2019-12-31&per_page=100&page=31
+url = "https://api.github.com/repos/" + \
+    repoOwner+"/"+repoName + "/commits?"  \
+    "author-date:2019-01-01..2019-12-31&per_page=100"
 headers = {
-    "Accept": "application/vnd.github.cloak-preview"
+    "Accept": "application/vnd.github.cloak-preview",
+    "Authorization": "token eca8d1c83d2d62fcbc619dee372c1c6162112cc3"
 }
 
 
