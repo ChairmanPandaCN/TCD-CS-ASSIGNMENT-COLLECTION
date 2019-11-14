@@ -2,6 +2,8 @@ import requests
 import getpass
 import re
 from github import Github
+# Problem :
+# Cant read commits which were commited on the date when a contributor made the last commit to the project.Since there is no date to compare with
 
 # Functions Prototype
 
@@ -23,26 +25,38 @@ def readCommits(url, headers, maxPageNumber):
     url = url+"&page="
     date = None
     dict = {}
+
+    fo = open("commits.csv", "w", encoding='utf-8')
+    fo.close()
     fo = open("commits.csv", "a", encoding='utf-8')
-    fo.write("name,type,value,date")
+    fo.write("name,type,value,date\n")
     while 1 <= maxPageNumber:
         tmpUrl = url+str(maxPageNumber)
         response = requests.get(tmpUrl, headers=headers)
         result = response.json()
-        for commit in reversed(result):
+        for entry in reversed(result):
             commitNumber = commitNumber+1
-            getCommitAttributes = commit["commit"]
-            getAuthor = getCommitAttributes["author"]
-            getAuthorName = getAuthor["name"]
-            getCommitDate = getAuthor["date"]
+            if(entry["author"] != None and len(entry["author"]) != 0):
+                getAuthor = entry["author"]
+                getAuthorName = getAuthor["login"]
+                getCommit = entry["commit"]
+                getCommitter = getCommit["committer"]
+                getTimePushedOntoGithub = getCommitter["date"]
+            else:
+                getCommit = entry["commit"]
+                getAuthor = getCommit["author"]
+                getAuthorName = getAuthor["name"]
+                getCommitter = getCommit["committer"]
+                getTimePushedOntoGithub = getCommitter["date"]
             # Only take date in this format : yyyy-mm-dd
-            truncatedCommitDate = getCommitDate[0:10]
+            truncatedCommitDate = getTimePushedOntoGithub[0:10]
             # The date of a commit is assigned to the variable date.
             # If the value stored in date is different from the date of a commit read from the github,it means that the commit was made a day latter than the previous commits.
             if (date != truncatedCommitDate and len(dict) != 0):
-                # A new day starts,if this commit is the first commit of the day,update this value.
+                # A new day starts,if this commit is the first commit of the day,update
+                print(date)
                 for k, v in dict.items():
-                    fo.write(","+k+","+str(v)+","+date+"\n")
+                    fo.write(k+",,"+str(v)+","+date+"\n")
 
             date = truncatedCommitDate
             if(len(dict) == 0):
@@ -53,15 +67,8 @@ def readCommits(url, headers, maxPageNumber):
                 else:
                     dict[getAuthorName] = 1
 
-            NextDay = getCommitDate[0:10]
+            #NextDay = getCommitDate[0:10]
             # print(getAuthorName)
-            """
-            if(contributor.__len__() != 0):
-                print(contributor["login"])
-            else:
-                print("The person who made this commit stay anonymous")
-                accountClosed = accountClosed+1
-            """
         maxPageNumber = maxPageNumber-1
     print("The total number of commits is", commitNumber)
 
@@ -72,18 +79,23 @@ def readCommits(url, headers, maxPageNumber):
 # password = getpass.getpass("Enter your password: ")
 # user = Github(username, password)
 # repo = user.get_repo("996icu/996.ICU")
-repoOwner = "996icu"
-repoName = "996.ICU"
+repoOwner = input("Pls input the owner name of the repo : ")
+repoName = input("Pls input the name of repo : ")
+since = input(
+    "Input the date the program starts to collect (format : yyyy-mm-dd) :")
+until = input(
+    "Input the date the program ceases collection (format : yyyy-mm-dd) : ")
 #username = input("Enter your username:")
 #password = getpass.getpass("Enter your password:")
 # up-to-date retrieving commits up to 3019
 # https://api.github.com/repos/996icu/996.ICU/commits?author-date:2019-01-01..2019-12-31&per_page=100&page=31
 url = "https://api.github.com/repos/" + \
     repoOwner+"/"+repoName + "/commits?"  \
-    "author-date:2019-01-01..2019-12-31&per_page=100"
+    "since="+since + "&" + "until="+until+"&per_page=100"
+# author-date:2019-01-01..2019-12-31
 headers = {
     "Accept": "application/vnd.github.cloak-preview",
-    "Authorization": "token 01809afc43378e7fe9d10872471538437434b0e9"
+    "Authorization": "token "
 }
 
 
@@ -93,23 +105,4 @@ headers = {
 #maxPageNumber = re.search(r'\d+', str(matchObject.group(0)))
 print(readPageNumber(url, headers))
 readCommits(url, headers, readPageNumber(url, headers))
-"""
-response = requests.get(url, headers=headers)
-result = response.json()
-commits = result.get("items")
-accountClosed = 0
-for commit in commits:
-    contributor = commit["author"]
-    if(contributor != None):
-        print(contributor["login"])
-    else:
-        print("The person who made this commit closed his account.")
-        accountClosed = accountClosed+1
-
-print("The number of accounts been closed by its owner is %d", accountClosed)
-# with open("response.txt", 'wb') as f:
-#    f.write(response.json())
-# print(response.json())
-# print("FUCK U")
-"""
 print("sss")
