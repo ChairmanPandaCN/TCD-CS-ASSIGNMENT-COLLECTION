@@ -1,7 +1,7 @@
 import requests
 import getpass
 import re
-from github import Github
+import webbrowser
 # Problem :
 # Cant read commits which were commited on the date when a contributor made the last commit to the project.Since there is no date to compare with
 
@@ -54,7 +54,7 @@ def readCommits(url, headers, maxPageNumber):
             # If the value stored in date is different from the date of a commit read from the github,it means that the commit was made a day latter than the previous commits.
             if (date != truncatedCommitDate and len(dict) != 0):
                 # A new day starts,if this commit is the first commit of the day,update
-                print(date)
+                # print(date)
                 listofTuples = sorted(
                     dict.items(), reverse=True, key=lambda x:  x[1])
                 for elem in listofTuples:
@@ -76,6 +76,12 @@ def readCommits(url, headers, maxPageNumber):
             # NextDay = getCommitDate[0:10]
             # print(getAuthorName)
         maxPageNumber = maxPageNumber-1
+        # Flush the remaining entryies in the dict
+    listofTuples = sorted(
+        dict.items(), reverse=True, key=lambda x:  x[1])
+    for elem in listofTuples:
+        fo.write(str(elem[0])+",,"+str(elem[1])+","+date+",\n")
+    dict.clear()
     print("The total number of commits is", commitNumber)
 
 
@@ -87,21 +93,23 @@ def readCommits(url, headers, maxPageNumber):
 # repo = user.get_repo("996icu/996.ICU")
 repoOwner = input("Pls input the owner name of the repo : ")
 repoName = input("Pls input the name of repo : ")
-since = input(
-    "Input the date the program starts to collect (format : yyyy-mm-dd) :")
-until = input(
-    "Input the date the program ceases collection (format : yyyy-mm-dd) : ")
-# username = input("Enter your username:")
-# password = getpass.getpass("Enter your password:")
-# up-to-date retrieving commits up to 3019
-# https://api.github.com/repos/996icu/996.ICU/commits?author-date:2019-01-01..2019-12-31&per_page=100&page=31
-url = "https://api.github.com/repos/" + \
-    repoOwner+"/"+repoName + "/commits?"  \
-    "since="+since + "&" + "until="+until+"&per_page=100"
-# author-date:2019-01-01..2019-12-31
+retrieveAll = input(
+    "Enter 1 to retrieve all the commits ,otherwise retrieve a given range : ")
+if(retrieveAll == str(1)):
+    url = "https://api.github.com/repos/" + \
+        repoOwner+"/"+repoName + "/commits?"+"&per_page=100"
+else:
+    since = input(
+        "Input the date the program starts to collect (format : yyyy-mm-dd) : ")
+    until = input(
+        "Input the date the program ceases collection (format : yyyy-mm-dd) : ")
+    url = "https://api.github.com/repos/" + \
+        repoOwner+"/"+repoName + "/commits?"  \
+        "since="+since + "&" + "until="+until+"&per_page=100"
+
 headers = {
     "Accept": "application/vnd.github.cloak-preview",
-    "Authorization": "token ecef173256637a6e2f7f22f265c61e251111b906"
+    "Authorization": "token "
 }
 
 
@@ -109,6 +117,6 @@ headers = {
 # link = str(headers["link"])
 # matchObject = re.search(r'\d+>; rel="last"', link)
 # maxPageNumber = re.search(r'\d+', str(matchObject.group(0)))
-print(readPageNumber(url, headers))
+print("Retrieve the number of commits is " + str(readPageNumber(url, headers)))
 readCommits(url, headers, readPageNumber(url, headers))
-print("sss")
+print("Finished")
