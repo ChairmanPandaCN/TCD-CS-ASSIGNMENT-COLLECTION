@@ -23,6 +23,8 @@ def readCommits(url, headers, maxPageNumber):
     url = url+"&page="
     date = None
     dict = {}
+    fo = open("commits.csv", "a", encoding='utf-8')
+    fo.write("name,type,value,date")
     while 1 <= maxPageNumber:
         tmpUrl = url+str(maxPageNumber)
         response = requests.get(tmpUrl, headers=headers)
@@ -37,14 +39,12 @@ def readCommits(url, headers, maxPageNumber):
             truncatedCommitDate = getCommitDate[0:10]
             # The date of a commit is assigned to the variable date.
             # If the value stored in date is different from the date of a commit read from the github,it means that the commit was made a day latter than the previous commits.
-            if (date != truncatedCommitDate):
+            if (date != truncatedCommitDate and len(dict) != 0):
                 # A new day starts,if this commit is the first commit of the day,update this value.
-                date = truncatedCommitDate
-                fo = open(truncatedCommitDate+".csv", "w", encoding='utf-8')
-                for entry in dict.items():
-                    fo.write(str(entry))
-                dict.clear()
+                for k, v in dict.items():
+                    fo.write(","+k+","+str(v)+","+date+"\n")
 
+            date = truncatedCommitDate
             if(len(dict) == 0):
                 dict[getAuthorName] = 1
             else:
@@ -83,7 +83,7 @@ url = "https://api.github.com/repos/" + \
     "author-date:2019-01-01..2019-12-31&per_page=100"
 headers = {
     "Accept": "application/vnd.github.cloak-preview",
-    "Authentication": "lf0c8c0e09865eb1b7ae7aa1e660888bbb587cdedsk"
+    "Authorization": "token 01809afc43378e7fe9d10872471538437434b0e9"
 }
 
 
