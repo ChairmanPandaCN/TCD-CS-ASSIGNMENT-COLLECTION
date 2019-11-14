@@ -55,8 +55,14 @@ def readCommits(url, headers, maxPageNumber):
             if (date != truncatedCommitDate and len(dict) != 0):
                 # A new day starts,if this commit is the first commit of the day,update
                 print(date)
-                for k, v in dict.items():
-                    fo.write(k+",,"+str(v)+","+date+"\n")
+                listofTuples = sorted(
+                    dict.items(), reverse=True, key=lambda x:  x[1])
+                for elem in listofTuples:
+                    # fo.write(k+",,"+str(v)+","+date+",\n")
+                    fo.write(str(elem[0])+",,"+str(elem[1])+","+date+",\n")
+                    # print((str(elem[0])+",,"+str(elem[1])+","))
+                # for k, v in dict.items():
+                    # fo.write(k+",,"+str(v)+","+date+",\n")
 
             date = truncatedCommitDate
             if(len(dict) == 0):
@@ -67,7 +73,7 @@ def readCommits(url, headers, maxPageNumber):
                 else:
                     dict[getAuthorName] = 1
 
-            #NextDay = getCommitDate[0:10]
+            # NextDay = getCommitDate[0:10]
             # print(getAuthorName)
         maxPageNumber = maxPageNumber-1
     print("The total number of commits is", commitNumber)
@@ -85,8 +91,8 @@ since = input(
     "Input the date the program starts to collect (format : yyyy-mm-dd) :")
 until = input(
     "Input the date the program ceases collection (format : yyyy-mm-dd) : ")
-#username = input("Enter your username:")
-#password = getpass.getpass("Enter your password:")
+# username = input("Enter your username:")
+# password = getpass.getpass("Enter your password:")
 # up-to-date retrieving commits up to 3019
 # https://api.github.com/repos/996icu/996.ICU/commits?author-date:2019-01-01..2019-12-31&per_page=100&page=31
 url = "https://api.github.com/repos/" + \
@@ -95,14 +101,14 @@ url = "https://api.github.com/repos/" + \
 # author-date:2019-01-01..2019-12-31
 headers = {
     "Accept": "application/vnd.github.cloak-preview",
-    "Authorization": "token "
+    "Authorization": "token ecef173256637a6e2f7f22f265c61e251111b906"
 }
 
 
 # get the number of requests needed to make to get all the data
-#link = str(headers["link"])
-#matchObject = re.search(r'\d+>; rel="last"', link)
-#maxPageNumber = re.search(r'\d+', str(matchObject.group(0)))
+# link = str(headers["link"])
+# matchObject = re.search(r'\d+>; rel="last"', link)
+# maxPageNumber = re.search(r'\d+', str(matchObject.group(0)))
 print(readPageNumber(url, headers))
 readCommits(url, headers, readPageNumber(url, headers))
 print("sss")
