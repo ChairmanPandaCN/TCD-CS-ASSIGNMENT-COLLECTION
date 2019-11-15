@@ -1,9 +1,10 @@
 import requests
 import getpass
 import re
-import webbrowser
+import datetime
+
 # Problem :
-# Cant read commits which were commited on the date when a contributor made the last commit to the project.Since there is no date to compare with
+# Cant read commits which were commited on the date when a contributor made the last commit to the project.Since there is no date to compare with  [solved]
 
 # Functions Prototype
 
@@ -58,11 +59,15 @@ def readCommits(url, headers, maxPageNumber):
                 listofTuples = sorted(
                     dict.items(), reverse=True, key=lambda x:  x[1])
                 for elem in listofTuples:
-                    # fo.write(k+",,"+str(v)+","+date+",\n")
+                    # Name,Type,Value,Date
                     fo.write(str(elem[0])+",,"+str(elem[1])+","+date+",\n")
-                    # print((str(elem[0])+",,"+str(elem[1])+","))
-                # for k, v in dict.items():
-                    # fo.write(k+",,"+str(v)+","+date+",\n")
+
+                while(str(nextDay(date)) != truncatedCommitDate):
+                    date = nextDay(date)
+                    for elem in listofTuples:
+                        # Name,Type,Value,Date
+                        fo.write(str(elem[0])+",,"+str(elem[1])+","+date+",\n")
+                print("Finish reading the commits committed on that date : " + date)
 
             date = truncatedCommitDate
             if(len(dict) == 0):
@@ -85,12 +90,14 @@ def readCommits(url, headers, maxPageNumber):
     print("The total number of commits is", commitNumber)
 
 
-# enterCorrectAccountInfo = False
-# print("Pls enter your credentials correctly")
-# username = input("Enter your github username:")
-# password = getpass.getpass("Enter your password: ")
-# user = Github(username, password)
-# repo = user.get_repo("996icu/996.ICU")
+def nextDay(date):
+    year = int(date.split('-')[0])
+    month = int(date.split('-')[1])
+    day = int(date.split('-')[2])
+    nextDay = str((datetime.datetime(year, month, day)+datetime.timedelta(1)))
+    return nextDay[0:10]
+
+
 repoOwner = input("Pls input the owner name of the repo : ")
 repoName = input("Pls input the name of repo : ")
 retrieveAll = input(
@@ -107,9 +114,11 @@ else:
         repoOwner+"/"+repoName + "/commits?"  \
         "since="+since + "&" + "until="+until+"&per_page=100"
 
+tokenP1 = "695193244278396"
+tokenP2 = "dc5a04427f083a0a3a1420e87"
 headers = {
     "Accept": "application/vnd.github.cloak-preview",
-    "Authorization": "token "
+    "Authorization": "token "+tokenP1+tokenP2
 }
 
 
@@ -117,6 +126,7 @@ headers = {
 # link = str(headers["link"])
 # matchObject = re.search(r'\d+>; rel="last"', link)
 # maxPageNumber = re.search(r'\d+', str(matchObject.group(0)))
-print("Retrieve the number of commits is " + str(readPageNumber(url, headers)))
+print("Retrieve the number of pages of commits is " +
+      str(readPageNumber(url, headers)))
 readCommits(url, headers, readPageNumber(url, headers))
 print("Finished")
