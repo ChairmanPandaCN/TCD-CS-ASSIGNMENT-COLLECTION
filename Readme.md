@@ -1,4 +1,4 @@
-#CSU33012-Social-Graph
+# CSU33012-Social-Graph
 
 ## Credit
 This Project invokes a Dynamic Ranking Visualization tool developed by Jannchie.[Dynamic Ranking Visualization](https://github.com/Jannchie/Historical-ranking-data-visualization-based-on-d3.js/blob/master/readme-en.md)
