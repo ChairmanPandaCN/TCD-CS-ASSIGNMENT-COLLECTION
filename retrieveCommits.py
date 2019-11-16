@@ -1,5 +1,4 @@
 import requests
-import getpass
 import re
 import datetime
 
@@ -28,9 +27,9 @@ def readCommits(url, headers, maxPageNumber):
     dict = {}
 
     fo = open("commits.csv", "w", encoding='utf-8')
-    fo.close()
-    fo = open("commits.csv", "a", encoding='utf-8')
     fo.write("name,type,value,date\n")
+    f1 = open("wrongData.csv","w",encoding='utf-8')
+    f1.write("name,date\n")
     while 1 <= maxPageNumber:
         tmpUrl = url+str(maxPageNumber)
         response = requests.get(tmpUrl, headers=headers)
@@ -51,23 +50,37 @@ def readCommits(url, headers, maxPageNumber):
                 getTimePushedOntoGithub = getCommitter["date"]
             # Only take date in this format : yyyy-mm-dd
             truncatedCommitDate = getTimePushedOntoGithub[0:10]
+
             # The date of a commit is assigned to the variable date.
             # If the value stored in date is different from the date of a commit read from the github,it means that the commit was made a day latter than the previous commits.
+
             if (date != truncatedCommitDate and len(dict) != 0):
                 # A new day starts,if this commit is the first commit of the day,update
-                # print(date)
+                print(date)
                 listofTuples = sorted(
                     dict.items(), reverse=True, key=lambda x:  x[1])
                 for elem in listofTuples:
                     # Name,Type,Value,Date
-                    fo.write(str(elem[0])+",,"+str(elem[1])+","+date+",\n")
+                    fo.write(str(elem[0]).replace(",", " ") +
+                             ",,"+str(elem[1])+","+date+",\n")
+
+                print(truncatedCommitDate)
 
                 while(str(nextDay(date)) != truncatedCommitDate):
+                    if(datetime.datetime(int(date[0:4]), int(date[5:7]), int(date[8:10])) > datetime.datetime(int(truncatedCommitDate[0:4]), int(truncatedCommitDate[5:7]), int(truncatedCommitDate[8:10]))):
+                        # The date of a commit is determined by the time it was been pushed onto the github
+                        # In the perfect scenario,when Chronologically iterating all the commits in the repo,the date of each commit is either the same date as the previous commit or a/multiple day(s) later than the previous date.
+                        # Unfortunately, sometimes it happens for whatever reason,the date of a commit is one day earlier than the previous commit.In this case, write the commit into the alternative file.
+                        f1.write(getAuthorName+","+truncatedCommitDate+"\n")
+                        break
                     date = nextDay(date)
+                    print(date)
                     for elem in listofTuples:
                         # Name,Type,Value,Date
-                        fo.write(str(elem[0])+",,"+str(elem[1])+","+date+",\n")
-                print("Finish reading the commits committed on that date : " + date)
+                        fo.write(str(elem[0]).replace(
+                            ",", " ")+",,"+str(elem[1])+","+date+",\n")
+                    print(date)
+                #print("Finish reading the commits committed on that date : " + date)
 
             date = truncatedCommitDate
             if(len(dict) == 0):
@@ -88,6 +101,14 @@ def readCommits(url, headers, maxPageNumber):
         fo.write(str(elem[0])+",,"+str(elem[1])+","+date+",\n")
     dict.clear()
     print("The total number of commits is", commitNumber)
+
+
+def previousDay(date):
+    year = int(date.split('-')[0])
+    month = int(date.split('-')[1])
+    day = int(date.split('-')[2])
+    nextDay = str((datetime.datetime(year, month, day)-datetime.timedelta(1)))
+    return nextDay[0:10]
 
 
 def nextDay(date):
@@ -114,11 +135,11 @@ else:
         repoOwner+"/"+repoName + "/commits?"  \
         "since="+since + "&" + "until="+until+"&per_page=100"
 
-tokenP1 = "695193244278396"
-tokenP2 = "dc5a04427f083a0a3a1420e87"
+#tokenP1 = "695193244278396"
+#tokenP2 = "dc5a04427f083a0a3a1420e87"
 headers = {
     "Accept": "application/vnd.github.cloak-preview",
-    "Authorization": "token "+tokenP1+tokenP2
+    "Authorization": "token bed03ec70a8dfe3e193ffea9edc3e8033da6cf22"
 }
 
 
