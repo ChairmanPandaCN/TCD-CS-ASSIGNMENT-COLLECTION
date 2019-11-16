@@ -1,7 +1,7 @@
 import requests
 import re
 import datetime
-
+import os
 # Problem :
 # Cant read commits which were commited on the date when a contributor made the last commit to the project.Since there is no date to compare with  [solved]
 
@@ -25,10 +25,9 @@ def readCommits(url, headers, maxPageNumber):
     url = url+"&page="
     date = None
     dict = {}
-
-    fo = open("commits.csv", "w", encoding='utf-8')
-    fo.write("name,type,value,date\n")
-    f1 = open("wrongData.csv","w",encoding='utf-8')
+    relativePath = repoOwner + "/"+repoName+"/"
+    year = 0
+    f1 = open(relativePath+"wrongData.csv", "w", encoding='utf-8')
     f1.write("name,date\n")
     while 1 <= maxPageNumber:
         tmpUrl = url+str(maxPageNumber)
@@ -51,9 +50,18 @@ def readCommits(url, headers, maxPageNumber):
             # Only take date in this format : yyyy-mm-dd
             truncatedCommitDate = getTimePushedOntoGithub[0:10]
 
+            # If the value of year is different from the truncatedCommitDate[0:4],it means that a new year started when the commit was committed.
+            # Split the collected date into associatice parts,depends on which year the commit was committed.
+            # Store everything in a large table causes the incapability of visualization.
+
+            if(year != truncatedCommitDate[0:4]):
+                year = truncatedCommitDate[0:4]
+                fo = open(relativePath+str(year)+".csv",
+                          "w", encoding='utf-8')
+                fo.write("name,type,value,date\n")
+
             # The date of a commit is assigned to the variable date.
             # If the value stored in date is different from the date of a commit read from the github,it means that the commit was made a day latter than the previous commits.
-
             if (date != truncatedCommitDate and len(dict) != 0):
                 # A new day starts,if this commit is the first commit of the day,update
                 print(date)
@@ -135,11 +143,13 @@ else:
         repoOwner+"/"+repoName + "/commits?"  \
         "since="+since + "&" + "until="+until+"&per_page=100"
 
+if(not os.path.exists(repoOwner+'/'+repoName)):
+    os.makedirs(repoOwner+'/'+repoName)
 #tokenP1 = "695193244278396"
 #tokenP2 = "dc5a04427f083a0a3a1420e87"
 headers = {
     "Accept": "application/vnd.github.cloak-preview",
-    "Authorization": "token bed03ec70a8dfe3e193ffea9edc3e8033da6cf22"
+    "Authorization": "token 2722d709748db898682dd8ba27ad532e2e743299"
 }
 
 
