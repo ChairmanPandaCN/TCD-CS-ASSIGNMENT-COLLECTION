@@ -9,7 +9,7 @@
   encoding: "UTF-8",
 
   // 每个时间节点最多显示的条目数。
-  max_number: 15,
+  max_number: 20,
 
   // 控制是否显示顶部附加信息文字。
   showMessage: true,
@@ -30,7 +30,7 @@
   reverse: false,
 
   // 类型根据什么字段区分？如果是name，则关闭类型显示
-  divide_by: 'type',
+  divide_by: 'name',
 
   // 颜色根据什么字段区分？
   divide_color_by: 'name',

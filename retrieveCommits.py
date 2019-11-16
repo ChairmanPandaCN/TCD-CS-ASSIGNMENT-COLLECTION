@@ -2,11 +2,8 @@ import requests
 import re
 import datetime
 import os
-# Problem :
-# Cant read commits which were commited on the date when a contributor made the last commit to the project.Since there is no date to compare with  [solved]
 
 # Functions Prototype
-
 # Retrieve the number of pages need to read to iterate over all the commits
 
 
@@ -24,10 +21,13 @@ def readCommits(url, headers, maxPageNumber):
     commitNumber = 0
     url = url+"&page="
     date = None
-    dict = {}
+    commitsPerAuthor = {}
+    commitHour = {}
     relativePath = repoOwner + "/"+repoName+"/"
     year = 0
     f1 = open(relativePath+"wrongData.csv", "w", encoding='utf-8')
+    f2 = open(relativePath+"pushedOntoGitHub.csv", "w", encoding='utf-8')
+    f2.write("name,type,value,date\n")
     f1.write("name,date\n")
     while 1 <= maxPageNumber:
         tmpUrl = url+str(maxPageNumber)
@@ -49,7 +49,7 @@ def readCommits(url, headers, maxPageNumber):
                 getTimePushedOntoGithub = getCommitter["date"]
             # Only take date in this format : yyyy-mm-dd
             truncatedCommitDate = getTimePushedOntoGithub[0:10]
-
+            truncatedCommitHour = int(getTimePushedOntoGithub[11:13])
             # If the value of year is different from the truncatedCommitDate[0:4],it means that a new year started when the commit was committed.
             # Split the collected date into associatice parts,depends on which year the commit was committed.
             # Store everything in a large table causes the incapability of visualization.
@@ -62,15 +62,18 @@ def readCommits(url, headers, maxPageNumber):
 
             # The date of a commit is assigned to the variable date.
             # If the value stored in date is different from the date of a commit read from the github,it means that the commit was made a day latter than the previous commits.
-            if (date != truncatedCommitDate and len(dict) != 0):
+            if (date != truncatedCommitDate and len(commitsPerAuthor) != 0):
                 # A new day starts,if this commit is the first commit of the day,update
                 print(date)
-                listofTuples = sorted(
-                    dict.items(), reverse=True, key=lambda x:  x[1])
-                for elem in listofTuples:
+                commitsSortedInQuantityOrder = sorted(
+                    commitsPerAuthor.items(), reverse=True, key=lambda x:  x[1])
+                for elem in commitsSortedInQuantityOrder:
                     # Name,Type,Value,Date
                     fo.write(str(elem[0]).replace(",", " ") +
                              ",,"+str(elem[1])+","+date+",\n")
+
+                for k, v in commitHour.items():
+                    f2.write(str(k)+",,"+str(v)+","+date+",\n")
 
                 print(truncatedCommitDate)
 
@@ -81,33 +84,47 @@ def readCommits(url, headers, maxPageNumber):
                         # Unfortunately, sometimes it happens for whatever reason,the date of a commit is one day earlier than the previous commit.In this case, write the commit into the alternative file.
                         f1.write(getAuthorName+","+truncatedCommitDate+"\n")
                         break
+
                     date = nextDay(date)
-                    print(date)
-                    for elem in listofTuples:
+
+                    for elem in commitsSortedInQuantityOrder:
                         # Name,Type,Value,Date
                         fo.write(str(elem[0]).replace(
                             ",", " ")+",,"+str(elem[1])+","+date+",\n")
-                    print(date)
+
+                    for k, v in commitHour.items():
+                        f2.write(str(k)+",,"+str(v)+","+date+",\n")
                 #print("Finish reading the commits committed on that date : " + date)
 
             date = truncatedCommitDate
-            if(len(dict) == 0):
-                dict[getAuthorName] = 1
+            if(len(commitsPerAuthor) == 0):
+                commitsPerAuthor[getAuthorName] = 1
             else:
-                if(getAuthorName in dict):
-                    dict[getAuthorName] = dict.get(getAuthorName)+1
+                if(getAuthorName in commitsPerAuthor):
+                    commitsPerAuthor[getAuthorName] = commitsPerAuthor.get(
+                        getAuthorName)+1
                 else:
-                    dict[getAuthorName] = 1
+                    commitsPerAuthor[getAuthorName] = 1
+
+            if(len(commitHour) == 0):
+                commitHour[truncatedCommitHour] = 1
+            else:
+                if(truncatedCommitHour in commitHour):
+                    commitHour[truncatedCommitHour] = commitHour.get(
+                        truncatedCommitHour)+1
+                else:
+                    commitHour[truncatedCommitHour] = 1
 
             # NextDay = getCommitDate[0:10]
             # print(getAuthorName)
         maxPageNumber = maxPageNumber-1
-        # Flush the remaining entryies in the dict
-    listofTuples = sorted(
-        dict.items(), reverse=True, key=lambda x:  x[1])
-    for elem in listofTuples:
+        # Flush the remaining entryies in the commitsPerAuthor
+    commitsSortedInQuantityOrder = sorted(
+        commitsPerAuthor.items(), reverse=True, key=lambda x:  x[1])
+    for elem in commitsSortedInQuantityOrder:
         fo.write(str(elem[0])+",,"+str(elem[1])+","+date+",\n")
-    dict.clear()
+    for k, v in commitHour.items():
+        f2.write(str(k)+",,"+str(v)+","+date+",\n")
     print("The total number of commits is", commitNumber)
 
 
@@ -149,7 +166,7 @@ if(not os.path.exists(repoOwner+'/'+repoName)):
 #tokenP2 = "dc5a04427f083a0a3a1420e87"
 headers = {
     "Accept": "application/vnd.github.cloak-preview",
-    "Authorization": "token 2722d709748db898682dd8ba27ad532e2e743299"
+    "Authorization": "token "
 }
 
 

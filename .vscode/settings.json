@@ -1,4 +1,4 @@
 {
     "python.formatting.provider": "autopep8",
-    "python.pythonPath": "/bin/python3"
+    "python.pythonPath": "D:\\Software\\python\\python.exe"
 }
