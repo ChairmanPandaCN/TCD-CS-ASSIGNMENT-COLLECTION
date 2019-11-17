@@ -25,10 +25,15 @@ def readCommits(url, headers, maxPageNumber):
     commitHour = {}
     relativePath = repoOwner + "/"+repoName+"/"
     year = 0
-    f1 = open(relativePath+"wrongData.csv", "w", encoding='utf-8')
-    f2 = open(relativePath+"pushedOntoGitHub.csv", "w", encoding='utf-8')
+    date = None
+    fo = open(relativePath+"commitsCount.csv",
+              "w", encoding='utf-8')
+    f2 = open(relativePath+"push.csv",
+              "w", encoding='utf-8')
+    fo.write("name,type,value,date\n")
     f2.write("name,type,value,date\n")
-    f1.write("name,date\n")
+    authorNameOfLastEntry = ""
+    timePushedOntoGithubOfLastEntry = ""
     while 1 <= maxPageNumber:
         tmpUrl = url+str(maxPageNumber)
         response = requests.get(tmpUrl, headers=headers)
@@ -50,53 +55,59 @@ def readCommits(url, headers, maxPageNumber):
             # Only take date in this format : yyyy-mm-dd
             truncatedCommitDate = getTimePushedOntoGithub[0:10]
             truncatedCommitHour = int(getTimePushedOntoGithub[11:13])
+            if(date == None):
+                date = truncatedCommitDate
+
             # If the value of year is different from the truncatedCommitDate[0:4],it means that a new year started when the commit was committed.
             # Split the collected date into associatice parts,depends on which year the commit was committed.
             # Store everything in a large table causes the incapability of visualization.
 
-            if(year != truncatedCommitDate[0:4]):
-                year = truncatedCommitDate[0:4]
-                fo = open(relativePath+str(year)+".csv",
-                          "w", encoding='utf-8')
-                fo.write("name,type,value,date\n")
+            # if(year != truncatedCommitDate[0:4]):
+                #year = truncatedCommitDate[0:4]
+                # fo = open(relativePath+str(year)+".csv",
+                # "w", encoding='utf-8')
+                # f2 = open(relativePath+str(year)+"pushedOntoGitHub.csv",
+                # "w", encoding='utf-8')
+                # fo.write("name,type,value,date\n")
+                # f2.write("name,type,value,date\n")
+            # In the perfect scenario,when Chronologically iterating all the commits in the repo,the date of each commit is either the same date as the previous commit or a/multiple day(s) later than the previous date.Unfortunately, sometimes it happens for whatever reasons,the date of a commit is one day earlier than the previous commit.In this case, pretend the commit was committed at the same date as the previous commit.
 
             # The date of a commit is assigned to the variable date.
             # If the value stored in date is different from the date of a commit read from the github,it means that the commit was made a day latter than the previous commits.
+            date_yyyy = int(date[0:4])
+            date_mm = int(date[5:7])
+            date_dd = int(date[8:10])
+            truncatedCommitDate_yyyy = int(truncatedCommitDate[0:4])
+            truncatedCommitDate_mm = int(truncatedCommitDate[5:7])
+            truncatedCommitDate_dd = int(truncatedCommitDate[8:10])
             if (date != truncatedCommitDate and len(commitsPerAuthor) != 0):
-                # A new day starts,if this commit is the first commit of the day,update
-                print(date)
-                commitsSortedInQuantityOrder = sorted(
-                    commitsPerAuthor.items(), reverse=True, key=lambda x:  x[1])
-                for elem in commitsSortedInQuantityOrder:
-                    # Name,Type,Value,Date
-                    fo.write(str(elem[0]).replace(",", " ") +
-                             ",,"+str(elem[1])+","+date+",\n")
-
-                for k, v in commitHour.items():
-                    f2.write(str(k)+",,"+str(v)+","+date+",\n")
-
-                print(truncatedCommitDate)
-
-                while(str(nextDay(date)) != truncatedCommitDate):
-                    if(datetime.datetime(int(date[0:4]), int(date[5:7]), int(date[8:10])) > datetime.datetime(int(truncatedCommitDate[0:4]), int(truncatedCommitDate[5:7]), int(truncatedCommitDate[8:10]))):
-                        # The date of a commit is determined by the time it was been pushed onto the github
-                        # In the perfect scenario,when Chronologically iterating all the commits in the repo,the date of each commit is either the same date as the previous commit or a/multiple day(s) later than the previous date.
-                        # Unfortunately, sometimes it happens for whatever reason,the date of a commit is one day earlier than the previous commit.In this case, write the commit into the alternative file.
-                        f1.write(getAuthorName+","+truncatedCommitDate+"\n")
-                        break
-
-                    date = nextDay(date)
-
+                if(datetime.datetime(date_yyyy, date_mm, date_dd) < datetime.datetime(truncatedCommitDate_yyyy, truncatedCommitDate_mm, truncatedCommitDate_dd)):
+                    # A new day starts,if this commit is the first commit of the day,update
+                    print(date)
+                    commitsSortedInQuantityOrder = sorted(
+                        commitsPerAuthor.items(), reverse=True, key=lambda x:  x[1])
                     for elem in commitsSortedInQuantityOrder:
                         # Name,Type,Value,Date
-                        fo.write(str(elem[0]).replace(
-                            ",", " ")+",,"+str(elem[1])+","+date+",\n")
+                        fo.write(str(elem[0]).replace(",", " ") +
+                                 ",,"+str(elem[1])+","+date+",\n")
 
                     for k, v in commitHour.items():
                         f2.write(str(k)+",,"+str(v)+","+date+",\n")
-                #print("Finish reading the commits committed on that date : " + date)
 
-            date = truncatedCommitDate
+                    print(truncatedCommitDate)
+                    # from date a to date b,if no commits commited during this perious,for the smoothness of visualization,using existing data to fill the gap
+                    while(str(nextDay(date)) != truncatedCommitDate):
+                        date = nextDay(date)
+
+                        for elem in commitsSortedInQuantityOrder:
+                            # Name,Type,Value,Date
+                            fo.write(str(elem[0]).replace(
+                                ",", " ")+",,"+str(elem[1])+","+date+",\n")
+
+                        for k, v in commitHour.items():
+                            f2.write(str(k)+",,"+str(v)+","+date+",\n")
+                    # print("Finish reading the commits committed on that date : " + date)
+                    date = truncatedCommitDate
             if(len(commitsPerAuthor) == 0):
                 commitsPerAuthor[getAuthorName] = 1
             else:
@@ -115,16 +126,17 @@ def readCommits(url, headers, maxPageNumber):
                 else:
                     commitHour[truncatedCommitHour] = 1
 
-            # NextDay = getCommitDate[0:10]
-            # print(getAuthorName)
+                # NextDay = getCommitDate[0:10]
+                # print(getAuthorName)
         maxPageNumber = maxPageNumber-1
         # Flush the remaining entryies in the commitsPerAuthor
     commitsSortedInQuantityOrder = sorted(
         commitsPerAuthor.items(), reverse=True, key=lambda x:  x[1])
     for elem in commitsSortedInQuantityOrder:
-        fo.write(str(elem[0])+",,"+str(elem[1])+","+date+",\n")
+        fo.write(str(elem[0]).replace(",", " ") +
+                 ",,"+str(elem[1])+","+date+",\n")
     for k, v in commitHour.items():
-        f2.write(str(k)+",,"+str(v)+","+date+",\n")
+        f2.write(str(k)+",,"+str(v)+","+date+"\n")
     print("The total number of commits is", commitNumber)
 
 
@@ -160,13 +172,14 @@ else:
         repoOwner+"/"+repoName + "/commits?"  \
         "since="+since + "&" + "until="+until+"&per_page=100"
 
+
 if(not os.path.exists(repoOwner+'/'+repoName)):
     os.makedirs(repoOwner+'/'+repoName)
-#tokenP1 = "695193244278396"
-#tokenP2 = "dc5a04427f083a0a3a1420e87"
+# tokenP1 = "695193244278396"
+# tokenP2 = "dc5a04427f083a0a3a1420e87"
 headers = {
     "Accept": "application/vnd.github.cloak-preview",
-    "Authorization": "token "
+    "Authorization": "token 513bdfd44756a1f583fec45471753e1709540754"
 }
 
 
