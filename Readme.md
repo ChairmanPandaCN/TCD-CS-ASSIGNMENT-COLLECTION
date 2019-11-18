@@ -15,29 +15,29 @@ For example, people who work on the 996.ICU project are owls,since the number of
 2. A Python3 intepreter is needed
 
 ## How this project works    
-1. type 'python retrieveCommits.py' in the bash.This file automatically pulls relative date. 
+1. type 'python retrieveCommits.py' in the bash.This file automatically pulls relative data. 
 2. Enter the repo owner name 
 3. Enter the repo name 
-4. Enter 1 to retrieve all the commits ,otherwise retrieve a given range 
+4. Enter 1 to retrieve all the commits ,otherwise specify a given range 
 5. Specify the starting date of the repo you want to measure from,in the format of yyyy-mm-dd
 6. Specify the end date of the measurement in the format yyyy-mm-dd
-7. Simple wait until the console pops up "Finished" in the bash. The waiting time depends on the number of commits committed within the given period.It took me 1 hour to get all the commits of the torvalds/linux project from the github.
-8.  This program generates a year.csv file and stores all the collected data associate with that year into it.Each row in this file represents the number of commits committed by that date in the name of the author
-9.  This program generates a pushedOnGitHub.csv file.Each row in this file represents the number of commits pushed onto the github in the associated hour by that date.
+7. Simple wait until the console pops up "Finished" in the bash. The waiting time depends on the number of commits committed within the given period.
+8.  This program generates a commitsCount.csv file and stores all the collected into it.Each row in this file represents the number of commits committed by that date in the name of the author
+9.  This program generates a push.csv file.Each row in this file represents the number of commits pushed onto the github in the associated hour by that date.
 10. Open the "bargraph.html" with your browser
 11. Upload the generated "commitsCount.csv" file or "push.csv" file
 12. Finish watching the bar char show  
 
 ## Showcase
-1. Some files named after the repoOwnerName/repoName have some test data.
-2. All the commits are divided into different years,but the continuity of the data exists in those files.
+1. Files named after the repoOwnerName/repoName have some test data.
+2. ~~~All the commits are divided into different years,but the continuity of the data exists in those files.~~~
 3. Open the "bargraph.html" in your browser
-4.  Upload the generated "commitsCount.csv" file or "push.csv" file
-5.  Finish watching the bar char show
+4. Upload the generated "commitsCount.csv" file or "push.csv" file
+5. Finish watching the bar char show
 
 
 ## Flaws
-1.In the perfect scenario,when Chronologically iterating all the commits in the repo,the date of each commit is either the same date as the previous commit or a/multiple day(s) later than the previous date.Unfortunately, sometimes it happens for whatever reasons,the date of a commit is one day earlier than the previous commit.In this case, pretend the commit was committed at the same date as the previous commit.
+1.In the perfect scenario,when Chronologically iterating all the commits in the repo,the date of each commit is either the same date as the previous commits or a/multiple day(s) later than previous commits .Unfortunately, sometimes it happens for whatever reasons,the date of a commit is one day or multiple days earlier than the previous commit.In this case, pretend the commit was committed at the same date as the previous commit.
 
 ## Improvements
 1. Use GitHub API to retrieve all the commits in a tmp file.
