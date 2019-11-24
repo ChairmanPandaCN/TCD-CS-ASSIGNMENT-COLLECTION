@@ -35,7 +35,7 @@ For example, people who work on the 996.ICU project are owls,since the number of
 4. Upload the generated "commitsCount.csv" file or "push.csv" file
 5. Finish watching the bar char show
 6. A [youtube link](https://youtu.be/Ubuux7ojcWw) is provided to see the aggregated commits count for each contributor throughout the process of developping on the VSCODE porject from the beginning of the project to the date of data been collected.
-7. A [youtube link](https://youtu.be/Ubuux7ojcWw) is provided to see which hour people who work on the vscode project are likely to contribute to this project.   
+7. A [youtube link](https://youtu.be/w8OymX14By8) is provided to see which hour people who work on the vscode project are likely to contribute to this project.   
 
 ## Flaws
 1.In the perfect scenario,when Chronologically iterating all the commits in the repo,the date of each commit is either the same date as the previous commits or a/multiple day(s) later than previous commits .Unfortunately, sometimes it happens for whatever reasons,the date of a commit is one day or multiple days earlier than the previous commit.In this case, pretend the commit was committed at the same date as the previous commit.
