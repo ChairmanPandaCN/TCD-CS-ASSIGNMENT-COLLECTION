@@ -1,0 +1,15 @@
+THEORY ProdCat
+
+IMPORT-HASKELL List
+
+THEOREM prodcat
+
+       product ((1:2:[])++(3:4:[])) == 24
+
+STRATEGY ReduceAll
+
+2+2
+ = SIMP
+1
+
+QED prodcat
