@@ -1,0 +1,18 @@
+﻿  Assembling fib.asm...
+fib.asm(3): error A2013: .MODEL must precede this directive
+fib.asm(37): error A2034: must be in segment block
+fib.asm(38): error A2034: must be in segment block
+fib.asm(39): error A2034: must be in segment block
+fib.asm(40): error A2034: must be in segment block
+fib.asm(41): error A2034: must be in segment block
+fib.asm(42): error A2034: must be in segment block
+fib.asm(43): error A2034: must be in segment block
+fib.asm(44): error A2034: must be in segment block
+fib.asm(45): error A2034: must be in segment block
+fib.asm(46): error A2034: must be in segment block
+fib.asm(47): error A2034: must be in segment block
+fib.asm(48): error A2034: must be in segment block
+fib.asm(49): error A2034: must be in segment block
+fib.asm(50): error A2034: must be in segment block
+fib.asm(35): error A2006: undefined symbol : fibX64
+D:\Program Files (x86)\VSE\MSBuild\Microsoft\VC\v160\BuildCustomizations\masm.targets(70,5): error MSB3721: The command "ml.exe /c /nologo /Zi /Fo"Debug\fib.obj" /W3 /errorReport:prompt  /Tafib.asm" exited with code 1.

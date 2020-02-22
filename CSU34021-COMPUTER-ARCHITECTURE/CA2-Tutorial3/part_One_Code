@@ -1,0 +1,47 @@
+    ADD RO,#4,R3                                ; int g=4
+
+
+min:
+    ADD R0,R26,R16                              ;int v=4
+    SUB R27,R16,R0,{C}                          ;if (b<v)
+    JGE if_b_GE_v                               ;
+    XOR R0,R0,R0                                ;delay jmp
+    ADD R0,R27,R16                              ;v=b
+if_b_GE_v:
+    SUB R28,R16,R0,{C}                          ;if (c<V
+    JGE if_c_GE_v                               ;
+    XOR R0,R0,R0                                ;delay jmp
+    ADD R0,R28,R16                              ;v=c
+if_c_GE_v:                                      ;
+    ADD R0,R16,R16                              ;return v
+    RET R25                                     ;
+    XOR R0,R0,R0                                ;
+
+p:
+    ADD R0,R3,R10                              ;pass g into min(g,i,j)
+    ADD R0,R26,R11                             ;pass i into min(g,i,j)
+    CALLR min                                  ;CALLR saves return address in r25
+    ADD R0,R27,R12                             ;pass j into min(g,i,j)
+    ADD R0,R1,R10                              ;pass min(g,i,j) into min(min(g, i, j), k, l);
+    ADD R0,R28,R11                             ;pass k into min(min(g, i, j), k, l);
+    CALLR min                                  ;
+    ADD R0,R29,R11                             ;pass l into min(min(g, i, j), k, l);
+    RET R25                                    ;                     
+    XOR R0,R0,R0                                ;
+
+gcd
+    ADD R7,R7,R0,{C}                           ;Test B & B
+    ADD R0,R26,R10                             ; pass a to mod(a,b)
+    JNE B_NE_ZERO                              ;if(B==0)
+    ADD R0,R27,R1                              ;
+    RET R25                                    ;
+    XOR R0,R0,R0                               ;
+
+B_NE_ZERO
+    CALLR mod                                  ;
+    ADD R0,R27,R11                             ;pass b to mod(a,b)                                  
+    ADD R0,R27,R10                             ;pass b to mod(b,a%b)
+    CALLR gcd ;                                ;
+    ADD R0,R1,R11                              ; pass a%b to mod(b,a%b)
+    RET R25                                    ;
+    XOR R0,R0,R0                               ;
