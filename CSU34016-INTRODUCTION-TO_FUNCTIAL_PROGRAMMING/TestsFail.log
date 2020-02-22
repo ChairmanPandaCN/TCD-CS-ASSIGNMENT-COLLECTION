@@ -1,0 +1,145 @@
+Exercise00> stack test
+ex00-0.1.0.0: build (lib + exe + test)
+Preprocessing library ex00-0.1.0.0...
+In-place registering ex00-0.1.0.0...
+Preprocessing executable 'ex00' for ex00-0.1.0.0...
+[1 of 2] Compiling Ex00             ( src/Ex00.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/ex00/ex00-tmp/Ex00.o )
+Linking .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/ex00/ex00 ...
+
+/Users/andrewbutterfield/REPOS/CSU34016-1920/Exercise00/In file included from /var/folders/53/mrmvfc25247gn296d970g16r0000gn/T/ghc34847_0/ghc_3.c:1:0:
+
+
+/Users/andrewbutterfield/REPOS/CSU34016-1920/Exercise00/In file included from /Users/andrewbutterfield/.stack/programs/x86_64-osx/ghc-7.10.3/lib/ghc-7.10.3/include/Rts.h:217:0:
+
+
+/Users/andrewbutterfield/.stack/programs/x86_64-osx/ghc-7.10.3/lib/ghc-7.10.3/include/rts/storage/ClosureMacros.h:505:5:
+     warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#if ZERO_SLOP_FOR_LDV_PROF || ZERO_SLOP_FOR_SANITY_CHECK
+    ^
+
+/Users/andrewbutterfield/.stack/programs/x86_64-osx/ghc-7.10.3/lib/ghc-7.10.3/include/rts/storage/ClosureMacros.h:502:37:
+     note: expanded from macro 'ZERO_SLOP_FOR_LDV_PROF'
+#define ZERO_SLOP_FOR_LDV_PROF     (defined(PROFILING))
+                                    ^
+
+/Users/andrewbutterfield/.stack/programs/x86_64-osx/ghc-7.10.3/lib/ghc-7.10.3/include/rts/storage/ClosureMacros.h:505:31:
+     warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#if ZERO_SLOP_FOR_LDV_PROF || ZERO_SLOP_FOR_SANITY_CHECK
+                              ^
+
+/Users/andrewbutterfield/.stack/programs/x86_64-osx/ghc-7.10.3/lib/ghc-7.10.3/include/rts/storage/ClosureMacros.h:503:37:
+     note: expanded from macro 'ZERO_SLOP_FOR_SANITY_CHECK'
+#define ZERO_SLOP_FOR_SANITY_CHECK (defined(DEBUG) && !defined(THREADED_RTS))
+                                    ^
+
+/Users/andrewbutterfield/.stack/programs/x86_64-osx/ghc-7.10.3/lib/ghc-7.10.3/include/rts/storage/ClosureMacros.h:505:31:
+     warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+
+/Users/andrewbutterfield/.stack/programs/x86_64-osx/ghc-7.10.3/lib/ghc-7.10.3/include/rts/storage/ClosureMacros.h:503:56:
+     note: expanded from macro 'ZERO_SLOP_FOR_SANITY_CHECK'
+#define ZERO_SLOP_FOR_SANITY_CHECK (defined(DEBUG) && !defined(THREADED_RTS))
+                                                       ^
+
+/Users/andrewbutterfield/.stack/programs/x86_64-osx/ghc-7.10.3/lib/ghc-7.10.3/include/rts/storage/ClosureMacros.h:523:5:
+     warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#if ZERO_SLOP_FOR_LDV_PROF && !ZERO_SLOP_FOR_SANITY_CHECK
+    ^
+
+/Users/andrewbutterfield/.stack/programs/x86_64-osx/ghc-7.10.3/lib/ghc-7.10.3/include/rts/storage/ClosureMacros.h:502:37:
+     note: expanded from macro 'ZERO_SLOP_FOR_LDV_PROF'
+#define ZERO_SLOP_FOR_LDV_PROF     (defined(PROFILING))
+                                    ^
+
+/Users/andrewbutterfield/.stack/programs/x86_64-osx/ghc-7.10.3/lib/ghc-7.10.3/include/rts/storage/ClosureMacros.h:523:32:
+     warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#if ZERO_SLOP_FOR_LDV_PROF && !ZERO_SLOP_FOR_SANITY_CHECK
+                               ^
+
+/Users/andrewbutterfield/.stack/programs/x86_64-osx/ghc-7.10.3/lib/ghc-7.10.3/include/rts/storage/ClosureMacros.h:503:37:
+     note: expanded from macro 'ZERO_SLOP_FOR_SANITY_CHECK'
+#define ZERO_SLOP_FOR_SANITY_CHECK (defined(DEBUG) && !defined(THREADED_RTS))
+                                    ^
+
+/Users/andrewbutterfield/.stack/programs/x86_64-osx/ghc-7.10.3/lib/ghc-7.10.3/include/rts/storage/ClosureMacros.h:523:32:
+     warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+
+/Users/andrewbutterfield/.stack/programs/x86_64-osx/ghc-7.10.3/lib/ghc-7.10.3/include/rts/storage/ClosureMacros.h:503:56:
+     note: expanded from macro 'ZERO_SLOP_FOR_SANITY_CHECK'
+#define ZERO_SLOP_FOR_SANITY_CHECK (defined(DEBUG) && !defined(THREADED_RTS))
+                                                       ^
+
+/Users/andrewbutterfield/.stack/programs/x86_64-osx/ghc-7.10.3/lib/ghc-7.10.3/include/rts/storage/ClosureMacros.h:552:5:
+     warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#if ZERO_SLOP_FOR_LDV_PROF && !ZERO_SLOP_FOR_SANITY_CHECK
+    ^
+
+/Users/andrewbutterfield/.stack/programs/x86_64-osx/ghc-7.10.3/lib/ghc-7.10.3/include/rts/storage/ClosureMacros.h:502:37:
+     note: expanded from macro 'ZERO_SLOP_FOR_LDV_PROF'
+#define ZERO_SLOP_FOR_LDV_PROF     (defined(PROFILING))
+                                    ^
+
+/Users/andrewbutterfield/.stack/programs/x86_64-osx/ghc-7.10.3/lib/ghc-7.10.3/include/rts/storage/ClosureMacros.h:552:32:
+     warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#if ZERO_SLOP_FOR_LDV_PROF && !ZERO_SLOP_FOR_SANITY_CHECK
+                               ^
+
+/Users/andrewbutterfield/.stack/programs/x86_64-osx/ghc-7.10.3/lib/ghc-7.10.3/include/rts/storage/ClosureMacros.h:503:37:
+     note: expanded from macro 'ZERO_SLOP_FOR_SANITY_CHECK'
+#define ZERO_SLOP_FOR_SANITY_CHECK (defined(DEBUG) && !defined(THREADED_RTS))
+                                    ^
+
+/Users/andrewbutterfield/.stack/programs/x86_64-osx/ghc-7.10.3/lib/ghc-7.10.3/include/rts/storage/ClosureMacros.h:552:32:
+     warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+
+/Users/andrewbutterfield/.stack/programs/x86_64-osx/ghc-7.10.3/lib/ghc-7.10.3/include/rts/storage/ClosureMacros.h:503:56:
+     note: expanded from macro 'ZERO_SLOP_FOR_SANITY_CHECK'
+#define ZERO_SLOP_FOR_SANITY_CHECK (defined(DEBUG) && !defined(THREADED_RTS))
+                                                       ^
+9 warnings generated.
+Preprocessing test suite 'ExerciseZero' for ex00-0.1.0.0...
+[1 of 2] Compiling Ex00             ( src/Ex00.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/ExerciseZero/ExerciseZero-tmp/Ex00.o )
+Linking .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/ExerciseZero/ExerciseZero ...
+
+/Users/andrewbutterfield/REPOS/CSU34016-1920/Exercise00/In file included from /var/folders/53/mrmvfc25247gn296d970g16r0000gn/T/ghc34861_0/ghc_3.c:1:0:
+
+
+/Users/andrewbutterfield/REPOS/CSU34016-1920/Exercise00/In file included from /Users/andrewbutterfield/.stack/programs/x86_64-osx/ghc-7.10.3/lib/ghc-7.10.3/include/Rts.h:217:0:
+
+
+/Users/andrewbutterfield/.stack/programs/x86_64-osx/ghc-7.10.3/lib/ghc-7.10.3/include/rts/storage/ClosureMacros.h:505:5:
+     warning: macro expansion producing 'defined' has undefined behavior [-Wexpansion-to-defined]
+#if ZERO_SLOP_FOR_LDV_PROF || ZERO_SLOP_FOR_SANITY_CHECK
+    ^
+
+/Users/andrewbutterfield/.stack/programs/x86_64-osx/ghc-7.10.3/lib/ghc-7.10.3/include/rts/storage/ClosureMacros.h:502:37:
+     note: expanded from macro 'ZERO_SLOP_FOR_LDV_PROF'
+#define ZERO_SLOP_FOR_LDV_PROF     (defined(PROFILING))
+                                    ^
+
+ 8 more warning:/note: messages deleted...
+
+9 warnings generated.
+ex00-0.1.0.0: copy/register
+Installing library in
+/Users/andrewbutterfield/REPOS/CSU34016-1920/Exercise00/.stack-work/install/x86_64-osx/lts-6.19/7.10.3/lib/x86_64-osx-ghc-7.10.3/ex00-0.1.0.0-5e2NMMgyKud6wfAfD3Wvb0
+Installing executable(s) in
+/Users/andrewbutterfield/REPOS/CSU34016-1920/Exercise00/.stack-work/install/x86_64-osx/lts-6.19/7.10.3/bin
+Registering ex00-0.1.0.0...
+ex00-0.1.0.0: test (suite: ExerciseZero)
+
+Progress 1/2: ex00-0.1.0.0
+Exercise 00 Tests:
+  Say Hello Nicely [20 marks]: [Failed]
+expected: "Hello World :-)"
+ but got: "I am currently a failing exercise"
+
+         Test Cases  Total
+ Passed  0           0
+ Failed  1           1
+ Total   1           1
+
+ex00-0.1.0.0: Test suite ExerciseZero failed
+Completed 2 action(s).
+Test suite failure for package ex00-0.1.0.0
+    ExerciseZero:  exited with: ExitFailure 1
+Logs printed to console

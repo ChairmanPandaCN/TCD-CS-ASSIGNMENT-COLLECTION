@@ -1,0 +1,27 @@
+Exercise00> stack test
+ex00-0.1.0.0: configure (lib + exe + test)
+Configuring ex00-0.1.0.0...
+ex00-0.1.0.0: build (lib + exe + test)
+Preprocessing library ex00-0.1.0.0...
+In-place registering ex00-0.1.0.0...
+Preprocessing executable 'ex00' for ex00-0.1.0.0...
+[1 of 2] Compiling Ex00             ( src/Ex00.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/ex00/ex00-tmp/Ex00.o )
+
+/Users/andrewbutterfield/REPOS/CSU34016-1920/Exercise00/src/Ex00.hs:4:10: Not in scope: ‘x’
+Progress 1/2
+
+--  While building package ex00-0.1.0.0 using:
+      /Users/andrewbutterfield/.stack/setup-exe-cache/x86_64-osx/Cabal-simple_mPHDZzAJ_1.22.5.0_ghc-7.10.3 --builddir=.stack-work/dist/x86_64-osx/Cabal-1.22.5.0 build lib:ex00 exe:ex00 test:ExerciseZero --ghc-options " -ddump-hi -ddump-to-file"
+    Process exited with code: ExitFailure 1
+Exercise00> stack test
+ex00-0.1.0.0: build (lib + exe + test)
+Preprocessing library ex00-0.1.0.0...
+In-place registering ex00-0.1.0.0...
+Preprocessing executable 'ex00' for ex00-0.1.0.0...
+Cabal-simple_mPHDZzAJ_1.22.5.0_ghc-7.10.3: can't find source for Ex00 in src/,
+.stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/autogen
+Progress 1/2
+
+--  While building package ex00-0.1.0.0 using:
+      /Users/andrewbutterfield/.stack/setup-exe-cache/x86_64-osx/Cabal-simple_mPHDZzAJ_1.22.5.0_ghc-7.10.3 --builddir=.stack-work/dist/x86_64-osx/Cabal-1.22.5.0 build lib:ex00 exe:ex00 test:ExerciseZero --ghc-options " -ddump-hi -ddump-to-file"
+    Process exited with code: ExitFailure 1
