@@ -18,6 +18,7 @@ L	{ return FIFTY; }
 C   { return HUNDRED; }
 D   { return FIVEH; }
 M   { return THOUSAND; }
+"+" {return +};
 \n  { return EOL; }
 .	{ yyerror("syntax error");return 0;}
 %%
